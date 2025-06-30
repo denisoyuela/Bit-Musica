@@ -250,7 +250,7 @@ const songs = [
      {
         title: "Glass Animals",
         artist: "Artista 36",
-        src: "Glass Animals - Heat Waves (Official Video) - GlassAnimalsVEVO.mp3",
+        src: "Glass Animals - Heat Waves (Official Video) - GlassAnimalsVEVO.mp3.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJiENv-mRQNHg0vhUy_PLSwM0Rwdk2KPDvg&s.jpg",
         duration: "3:56"
     },
