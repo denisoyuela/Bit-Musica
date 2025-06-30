@@ -201,7 +201,7 @@ const songs = [
      {
         title: " Pete Yorn",
         artist: "Artista 29",
-        src: " Pete Yorn - Ever Fallen In Love - Pete Yorn.mp3",
+        src: " Pete Yorn.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYViGpQZPmPoYQmG9W4bDvn1HmlLf5qcyPPQ&s.jpg",
         duration: "2:33"
     },
@@ -250,7 +250,7 @@ const songs = [
      {
         title: "Glass Animals",
         artist: "Artista 36",
-        src: "Glass Animals - Heat Waves (Official Video) - GlassAnimalsVEVO.mp3.mp3",
+        src: "Glass Animals - Heat Waves (Official Video) - GlassAnimalsVEVO.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJiENv-mRQNHg0vhUy_PLSwM0Rwdk2KPDvg&s.jpg",
         duration: "3:56"
     },
