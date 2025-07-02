@@ -35,9 +35,12 @@
                 <div class="bar"></div>
             </div>
             
-            <button class="skip-btn" id="skipBtn">
-                <i class="fas fa-forward"></i> Saltar
-            </button>
+            
+     <button class="skip-btn" id="soundButton"><i class="fas fa-forward"> saltar </i></button>
+    
+    <!-- Elemento audio (oculto) -->
+    <audio id="myAudio" src="BIOS - Zorrovian [Official Visualiser] - Zorrovian_1.mp3"></audio>
+    
         </div>
         
         <div class="version-info">
@@ -208,6 +211,22 @@ h1 span {
     transform: translateY(-2px);
     box-shadow: 0px 15px 20px #16ec56;
 }
+.soundButton{
+    background: linear-gradient(90deg, #ffffff 20%, #16ec56 80%);
+    color: black;
+    border: 1px solid #16ec56;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto;
+    animation: fadeIn 3s ease-out; 
+}
 
 .skip-btn i {
     font-size: 0.9rem;
@@ -303,25 +322,33 @@ h1 span {
             setTimeout(() => {
                 redirectToPlayer();
             }, 1000);
+
         }
     }, 500);
     
+
     // Función para redirigir al reproductor
     function redirectToPlayer() {
         // En un proyecto real, aquí iría la redirección
         console.log("Redirigiendo al reproductor...");
         window.location.href = "presentacion.html";
-       
         // Para implementación real:
         // window.location.href = "player.html";
     }
     
-    // Botón para saltar la pantalla de bienvenida
-    skipBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        clearInterval(loadInterval);
-        redirectToPlayer();
-    });
+    document.getElementById('soundButton').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+            audio.play();
+            setTimeout(() => {
+                // Cambia esta URL por la de tu sistema real
+                window.location.href = "index.html";
+            }, 1500);
+            
+        });
+
+       
+
     
     // Efecto de visualización de música aleatoria
     const bars = document.querySelectorAll('.music-visualizer .bar');
