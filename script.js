@@ -254,6 +254,69 @@ const songs = [
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJiENv-mRQNHg0vhUy_PLSwM0Rwdk2KPDvg&s.jpg",
         duration: "3:56"
     },
+    {
+        title: "The Cars",
+        artist: "Artista 37",
+        src: "The Cars - Drive (Official Music Video) - RHINO.mp3",
+        cover: "https://i.ytimg.com/vi/xuZA6qiJVfU/sddefault.jpg",
+        duration: "3:55"
+    },
+     {
+        title: "NVOY - Thinkin",
+        artist: "Artista 38",
+        src: "NVOY - Thinkin Bout U (VIP Mix) - Selected..mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzx0hUUFs0788JIJO0tyAXNMXSyupQL55iSg&s.jpg",
+        duration: "4:16"
+    },
+     {
+        title: "Goo Goo Dolls",
+        artist: "Artista 39",
+        src: "Goo Goo Dolls - Before It's Too Late (Sam and Mikaela's Theme) [Official Music Video] - Goo Goo Dolls.mp3",
+        cover: "https://i.ytimg.com/vi/SVl4_hxMDcA/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGH8gWyggMA8=&rs=AOn4CLAOj_JqVlQty80Dwb6ec5Yj1vEn8g.jpg",
+        duration: "3:20"
+    },
+     {
+        title: "HOME - Resonance",
+        artist: "Artista 40",
+        src: "HOME - Resonance - Electronic Gems.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFvCQXRjFBVGRSlJr4jeKuxDSGbaeYATMaA&s.jpg",
+        duration: "3:33"
+    },
+     {
+        title: "Aaron Hibell",
+        artist: "Artista 41",
+        src: "Aaron Hibell - i feel lost [official audio] - Aaron Hibell.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHMd6LldQAZlZyc5UcTgOYDrTon_IJbK1R7w&s.jpg",
+        duration: "3:28"
+    },
+     {
+        title: "undown - Stray.wav ",
+        artist: "Artista 42",
+        src: "undown - Stray.wav - Kurate Music.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQCHIRd-PPPoaThB6_mh6ZxOToiGmNDBq7Pg&s.jpg",
+        duration: "1:42"
+    },
+     {
+        title: "Max Bering",
+        artist: "Artista 43",
+        src: "Max Bering - If I Got U - Sirup Music.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKM5zvWsvE9jYkqJxFKDvh0jPJ60gFBt_yw&s.jpg",
+        duration: "2:43
+    },
+     {
+        title: "Goth (Slowed",
+        artist: "Artista 44",
+        src: "Goth (Slowed + Reverb) - Sidewalks and Skeletons.mp3",
+        cover: "https://cdn-images.dzcdn.net/images/cover/234f0b5f7d0dc3417243ae16c371f770/500x500.jpg",
+        duration: "4:13"
+    },
+     {
+        title: "You look lonely",
+        artist: "Artista 45",
+        src: "You look lonely  i can fix that x Home   Resonance x Rain slowed to literal perfection + reverb - Music Listener.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzMXIHx5vztgBPPf0EilU5UHjBKt19lpufUQ&s.jpg",
+        duration: "5:18"
+    },
 
     
     // Agrega más canciones según necesites
