@@ -14,13 +14,18 @@
             <div class="logo-container">
                 <img src="https://i.scdn.co/image/ab67616d0000b2731e2ecf78dea87c9f701c3d1f" alt="MelodyStream Logo" class="logo">
                 <h1>Bit<span>Music</span></h1>
-            </div>
+           
             
-            <p class="tagline">Tu música, donde quieras</p>
-            
+            <div class="loading-text">Cargando, por favor espere...</div>
             <div class="loading-bar">
-                <div class="progress"></div>
+                <div id="loadingProgress" class="loading-progress"></div>
             </div>
+            <div id="completionMessage" class="completion-message"> </div>
+        </div>
+    
+        <!-- Audio oculto que se reproduce al finalizar -->
+        <audio id="completionSound" src="tono.mp3"></audio>
+    
             
             <div class="welcome-message">
                 <p>Cargando tu experiencia musical...</p>
@@ -39,7 +44,7 @@
      <button class="skip-btn" id="soundButton"><i class="fas fa-forward"> saltar </i></button>
     
     <!-- Elemento audio (oculto) -->
-    <audio id="myAudio" src="BIOS - Zorrovian [Official Visualiser] - Zorrovian_1.mp3"></audio>
+    <audio id="myAudio" src="tono.mp3"></audio>
     
         </div>
         
@@ -48,7 +53,7 @@
         </div>
     </div>
     
-   
+</div>
     <style>
         * {
     margin: 0;
@@ -74,6 +79,22 @@ body {
     color: white;
    
 }
+.loading-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #2E7D32);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
 
 .background-overlay {
     position: absolute;
@@ -129,14 +150,14 @@ h1 span {
 .loading-bar {
     width: 100%;
     height: 6px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff;
     border-radius: 3px;
     margin: 2rem auto;
     overflow: hidden;
     animation: fadeIn 2s ease-out;
 }
 
-.progress {
+.loading-progress {
     height: 100%;
     width: 0%;
     background: linear-gradient(90deg, #ffffff 20%, #16ec56 80%);
@@ -295,54 +316,14 @@ h1 span {
         "¡Listo para disfrutar de tu música! "
     ];
     
-    let progress = 0;
-    let currentMessage = 0;
-    
-    // Simular progreso de carga
-    const loadInterval = setInterval(() => {
-        progress += Math.random() * 10;
-        if (progress > 100) progress = 100;
-        progressBar.style.width = `${progress}%`;
-        
-        // Cambiar mensaje según progreso
-        if (progress >= 25 && currentMessage === 0) {
-            welcomeMessage.textContent = messages[1];
-            currentMessage = 1;
-        } else if (progress >= 50 && currentMessage === 1) {
-            welcomeMessage.textContent = messages[2];
-            currentMessage = 2;
-        } else if (progress >= 75 && currentMessage === 2) {
-            welcomeMessage.textContent = messages[3];
-            currentMessage = 3;
-        }
-        
-        // Redirigir cuando la carga esté completa
-        if (progress >= 100) {
-            clearInterval(loadInterval);
-            setTimeout(() => {
-                redirectToPlayer();
-            }, 1000);
-
-        }
-    }, 500);
-    
-
-    // Función para redirigir al reproductor
-    function redirectToPlayer() {
-        // En un proyecto real, aquí iría la redirección
-        console.log("Redirigiendo al reproductor...");
-        window.location.href = "presentacion.html";
-        // Para implementación real:
-        // window.location.href = "player.html";
-    }
-    
+   
     document.getElementById('soundButton').addEventListener('click', function() {
             var audio = document.getElementById('myAudio');
             audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
             audio.play();
             setTimeout(() => {
                 // Cambia esta URL por la de tu sistema real
-                window.location.href = "index.html";
+                window.location.href = "presentacion.html";
             }, 1500);
             
         });
@@ -363,6 +344,36 @@ h1 span {
         });
     }, 300);
 });  
+
+document.addEventListener('DOMContentLoaded', function() {
+            const loadingProgress = document.getElementById('loadingProgress');
+            const completionMessage = document.getElementById('completionMessage');
+            const completionSound = document.getElementById('completionSound');
+            let progress = 0;
+
+            // Iniciar carga automáticamente
+            const loadingInterval = setInterval(() => {
+                progress += Math.random() * 10; // Incremento aleatorio para simular carga real
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(loadingInterval);
+
+                    // Mostrar mensaje de completado
+                    completionMessage.style.display = "block";
+
+                    // Reproducir sonido
+                    completionSound.currentTime = 0;
+                    completionSound.play();
+                    setTimeout(() => {
+                // Cambia esta URL por la de tu sistema real
+                window.location.href = "presentacion.html";
+            }, 1500);
+                }
+
+                // Actualizar barra de progreso
+                loadingProgress.style.width = progress + '%';
+            }, 250); // Velocidad de carga (ms)
+        });
     </script>
 </body>
 </html>
