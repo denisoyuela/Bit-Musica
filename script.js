@@ -301,7 +301,7 @@ const songs = [
         artist: "Artista 43",
         src: "Max Bering - If I Got U - Sirup Music.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxKM5zvWsvE9jYkqJxFKDvh0jPJ60gFBt_yw&s.jpg",
-        duration: "2:43
+        duration: "2:43"
     },
      {
         title: "Goth (Slowed",
