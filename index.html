@@ -12,7 +12,13 @@
         
         <div class="welcome-content">
             <div class="logo-container">
-                <img src="https://i.scdn.co/image/ab67616d0000b2731e2ecf78dea87c9f701c3d1f" alt="MelodyStream Logo" class="logo">
+                <img src="bitmusic.jpeg" alt="MelodyStream Logo" class="logo">
+                <div class="music-note note1">♫</div>
+        <div class="music-note note2">♪</div>
+        <div class="music-note note3">♩</div>
+        <div class="music-note note4">♬</div>
+        <div class="music-note note5">♫</div> 
+
                 <h1>Bit<span>Music</span></h1>
            
             
@@ -41,7 +47,7 @@
             </div>
             
             
-     <button class="skip-btn" id="soundButton"><i class="fas fa-forward"> saltar </i></button>
+     <button class="skip-btn" id="soundButton"><i class="fas fa-forward">saltar</i></button>
     
     <!-- Elemento audio (oculto) -->
     <audio id="myAudio" src="tono.mp3"></audio>
@@ -109,17 +115,19 @@ body {
     position: relative;
     z-index: 10;
     text-align: center;
-    padding: 2rem;
+    padding: 20px;
     max-width: 800px;
     width: 90%;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;  
+   
 }
 
 .logo-container {
     margin-bottom: 2rem;
     animation: fadeInDown 1s ease-out;
+   
 }
 
 .logo {
@@ -128,6 +136,25 @@ body {
     margin-bottom: 1rem;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
+
+.music-note {
+            position: absolute ;
+            color: #2ecc71;
+            font-size: 60px;
+            opacity: 0.8;
+            animation: float 4s infinite ease-in-out;
+        }
+        
+        .note1 { top: 20%; left: 30%; animation-delay: 0s; }
+        .note2 { top: 40%; left: 60%; animation-delay: 0.5s; }
+        .note3 { top: 70%; left: 20%; animation-delay: 1s; }
+        .note4 { top: 10%; left: 70%; animation-delay: 1.5s; }
+        .note5 { top: 60%; left: 50%; animation-delay: 2s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
 
 h1 {
     font-size: 3.5rem;
@@ -160,9 +187,14 @@ h1 span {
 .loading-progress {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #ffffff 20%, #16ec56 80%);
+    background: linear-gradient(90deg, 
+    #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6 );
     border-radius: 3px;
     transition: width 0.3s ease;
+   
 }
 
 .welcome-message {
@@ -211,46 +243,45 @@ h1 span {
 }
 
 .skip-btn {
-   background: linear-gradient(90deg, #ffffff 20%, #16ec56 80%);
+    padding: 10px 20px;
+    background: white;
     color: black;
-    border: 1px solid #16ec56;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-size: 1rem;
+    border-radius: 7px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 0 auto;
-    animation: fadeIn 3s ease-out;
+    position: relative;
+    border: none;
 }
 
-.skip-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+.skip-btn::before{
+    content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: linear-gradient(45deg, 
+            #0846f1, #c816ec, #0846f1, #16ecb6 , 
+            #0846f1, #c816ec, #16ecb6);
+            background-size: 400% 400%;
+            border-radius: 7px;
+            animation: gradientBorder 3s ease infinite;
+        
+}
+@keyframes gradientBorder {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+.skip-btn:hover { 
     transform: translateY(-2px);
-    box-shadow: 0px 15px 20px #16ec56;
+    color: white;
 }
-.soundButton{
-    background: linear-gradient(90deg, #ffffff 20%, #16ec56 80%);
-    color: black;
-    border: 1px solid #16ec56;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 0 auto;
-    animation: fadeIn 3s ease-out; 
-}
+
 
 .skip-btn i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .version-info {
@@ -366,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     completionSound.play();
                     setTimeout(() => {
                 // Cambia esta URL por la de tu sistema real
-                window.location.href = "presentacion.html";
+                window.location.href = "index.html";
             }, 1500);
                 }
 
