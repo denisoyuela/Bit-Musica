@@ -20,7 +20,11 @@
         <div class="music-note note5">♫</div> 
 
                 <h1>Bit<span>Music</span></h1>
-           
+                <div class="loading-container" id="loading">
+                    <div class="textos">problemas con el servidor</div>
+                    <div class="loading-spinner"></div>
+                   
+                </div>
             
             <div class="loading-text">Cargando, por favor espere...</div>
             <div class="loading-bar">
@@ -124,6 +128,42 @@ body {
    
 }
 
+
+
+.loading-container {
+    display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; 
+            padding: 20px;
+            border-radius: 20px;
+        }
+        
+        .loading-spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #16ec56;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+          
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+.textos{
+    width: 100px;
+
+}
 .logo-container {
     margin-bottom: 2rem;
     animation: fadeInDown 1s ease-out;
@@ -401,6 +441,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Actualizar barra de progreso
                 loadingProgress.style.width = progress + '%';
             }, 250); // Velocidad de carga (ms)
+             // Mostrar el loading después de 3 segundos (3000 milisegundos)
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'flex';
+        }, 6000);
         });
     </script>
 </body>
