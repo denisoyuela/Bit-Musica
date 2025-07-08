@@ -317,7 +317,27 @@ const songs = [
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzMXIHx5vztgBPPf0EilU5UHjBKt19lpufUQ&s.jpg",
         duration: "5:18"
     },
-
+    {
+        title: " Angel Numbers",
+        artist: "Artista 46",
+        src: "Chris Brown - Angel Numbers _ Ten Toes (Official Video) - ChrisBrownVEVO.mp3",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZdJ3iGz-WXdtxKYA5mcU29TKJjM51HKDsw&s.jpg",
+        duration: "5:08"
+    },
+     {
+        title: "Baby Come Back ",
+        artist: "Artista 47",
+        src: "Player - Baby Come Back (Lyrics) - PHANTOM RECORDS.mp3",
+        cover: "https://akamai.sscdn.co/uploadfile/letras/albuns/d/2/e/5/535031474381568.jpg",
+        duration: "4:14"
+    },
+     {
+        title: "1 Party Anthem ",
+        artist: "Artista 48",
+        src: "No. 1 Party Anthem - Arctic Monkeys.mp3",
+        cover: "https://i.ytimg.com/vi/mGUjVbsYG6E/maxresdefault.jpg",
+        duration: "4:04"
+    },
     
     // Agrega más canciones según necesites
 ];
