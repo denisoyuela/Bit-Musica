@@ -67,7 +67,7 @@ body {
 }
 
 .song-info p {
-    color: #aaa;
+    color: #ffffff;
     font-size: 1rem;
 }
 
@@ -83,7 +83,11 @@ body {
     height: 5px;
     -webkit-appearance: none;
     appearance: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, 
+    #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6 );
     border-radius: 5px;
     cursor: pointer;
 }
@@ -92,13 +96,17 @@ body {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    background: #1db954;
+    background: linear-gradient(90deg, 
+    #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6 );
     border-radius: 50%;
 }
 
 .progress-container span {
     font-size: 0.8rem;
-    color: #aaa;
+    color: #5c5555;
     min-width: 40px;
 }
 
@@ -112,7 +120,7 @@ body {
 .controls button {
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -125,7 +133,7 @@ body {
 }
 
 .controls button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background:#1db954;
 }
 
 .controls button:active {
