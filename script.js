@@ -347,15 +347,15 @@ const songs = [
         cover: "https://i.scdn.co/image/ab67616d0000b2738b1c1ed89416696a71a8ae4f",
      },
      {
-        title: "Walker Texas Ranger", artist: "Artista 51", src: "Walker Texas Ranger - The Eyes of the Ranger - CAT Music Maker",  duration: "2:50",
+        title: "Walker Texas Ranger", artist: "Artista 51", src: "Walker Texas Ranger - The Eyes of the Ranger - CAT Music Maker.mp3",  duration: "2:50",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHviggAnMHBy6tIW3IlSde1VObZKAPF63jXA&s",
      },
      {
-        title: "crystal castles", artist: "Artista 52", src: "crystal castles - suffocation (sped up + reverb) - evangeline",  duration: "3:41",
+        title: "crystal castles", artist: "Artista 52", src: "crystal castles - suffocation (sped up + reverb) - evangeline.mp3",  duration: "3:41",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo5edCODvaGWUDBcEdOjnuLSmhRaQ3aJQ2jg&s",
      },
      {
-        title: "Capital Cities ", artist: "Artista 53", src: "Capital Cities - Safe and Sound (DiscoTech Remix) - Capital Cities",  duration: "3:44",
+        title: "Capital Cities ", artist: "Artista 53", src: "Capital Cities - Safe and Sound (DiscoTech Remix) - Capital Cities.mp3",  duration: "3:44",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjwNdUrSIDcFst_3uE1p6a2vIMD8V8b4tUOw&s",
      },
     // Agrega más canciones según necesites
