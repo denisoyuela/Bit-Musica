@@ -360,7 +360,7 @@ const songs = [
      },
     {
         title: "Disclosur. Sam Smith", artist: "Artista 54", src: "Disclosure - Latch ft. Sam Smith - DisclosureVEVO.mp3",  duration: "4:17",
-        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIFI71Ri6LEaTMiWfY_h8sNDKl1j93UkLIWw&s,
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIFI71Ri6LEaTMiWfY_h8sNDKl1j93UkLIWw&s",
      },
     // Agrega más canciones según necesites
 ];
