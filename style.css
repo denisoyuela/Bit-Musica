@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
     background-position: center;
     background-size: cover;
 }
+
 
 .player-container {
     width: 90%;
@@ -151,7 +152,7 @@ body {
 }
 
 .playlist-container {
-    background: url(https://images.unsplash.com/photo-1567787609897-efa3625dd22d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWMlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D);
+    background: url(https://thumbs.dreamstime.com/b/lindo-robot-dj-en-neon-morado-hoodie-escuchando-m%C3%BAsica-un-adorable-con-una-capucha-morada-disfruta-de-la-auriculares-ambiente-356451781.jpg);
     border-radius: 10px ;
     padding: 15px;
    border: transparent;
@@ -177,7 +178,7 @@ body {
     border: 1px solid  rgb(236, 226, 226);
     border-radius: 20px ;
     padding: 8px 15px;
-    color: #ffff;
+    color: white;
     outline:none;
     background: transparent;
    
@@ -220,12 +221,21 @@ body {
 }
 
 #playlist li:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, 
+    #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6 );
 }
 
 #playlist li.playing {
-    color: #1db954;
+    color:white;
     font-weight: bold;
+    background: linear-gradient(90deg, 
+    #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6 );
 }
 
 #playlist li .song-duration {
