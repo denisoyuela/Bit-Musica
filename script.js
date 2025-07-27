@@ -570,6 +570,33 @@ searchBtn.addEventListener('click', searchSong);
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') searchSong();
 });
+// En tu archivo JavaScript
+const loadingOverlay = document.getElementById('loading-overlay');
 
+// Función para verificar la conexión
+function checkConnection() {
+  if (!navigator.onLine) {
+    loadingOverlay.classList.remove('loading-hidden');
+    // Intenta reconectar cada 5 segundos
+    setTimeout(checkConnection, 5000);
+  } else {
+    loadingOverlay.classList.add('loading-hidden');
+  }
+}
+
+// Event listeners para cambios en la conexión
+window.addEventListener('online', () => {
+  loadingOverlay.classList.add('loading-hidden');
+});
+
+window.addEventListener('offline', () => {
+  loadingOverlay.classList.remove('loading-hidden');
+});
+
+// Verificar conexión al cargar la página
+window.addEventListener('DOMContentLoaded', checkConnection);
+
+// Verificar periódicamente (cada 30 segundos)
+setInterval(checkConnection, 30000);
 // Inicializar
 initPlayer();
