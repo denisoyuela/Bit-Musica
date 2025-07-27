@@ -362,6 +362,18 @@ const songs = [
         title: "Disclosur. Sam Smith", artist: "Artista 54", src: "Disclosure - Latch ft. Sam Smith - DisclosureVEVO.mp3",  duration: "4:17",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIFI71Ri6LEaTMiWfY_h8sNDKl1j93UkLIWw&s",
      },
+     {
+        title: "Melly Mike", artist: "Artista 55", src: "Melly Mike - Young Black & Rich (Official Music Video) - Melly Mike.mp3",  duration: "2:32",
+        cover: "https://i.ytimg.com/vi/F3qWBh7jZZ0/maxresdefault.jpg",
+     },
+     {
+        title: " Distant Echoes", artist: "Artista 56", src: " - Distant Echoes (4K Official Music Video) - VXLLAIN.mp3",  duration: "3:04",
+        cover: "https://i.scdn.co/image/ab67616d0000b273ae71c97bfe3e39d1f63e7ebc",
+     },
+     {
+        title: "DJ Anemia, crier", artist: "Artista 57", src: "DJ Anemia, crier, sixnite — archangel (Slowed) (Official Visualizer) - DJ Anemia.mp3",  duration: "3:07",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyuzgH9TQyc8Axw4E2_-vNCpcW0c9IJCvXKA&s",
+     },
     // Agrega más canciones según necesites
 ];
 
