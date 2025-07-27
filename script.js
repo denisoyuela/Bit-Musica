@@ -367,7 +367,7 @@ const songs = [
         cover: "https://i.ytimg.com/vi/F3qWBh7jZZ0/maxresdefault.jpg",
      },
      {
-        title: " Distant Echoes", artist: "Artista 56", src: " - Distant Echoes (4K Official Music Video) - VXLLAIN.mp3",  duration: "3:04",
+        title: " Distant Echoes", artist: "Artista 56", src: " VXLLAIN, VØJ, Narvent - Distant Echoes (4K Official Music Video) - VXLLAIN.mp3",  duration: "3:04",
         cover: "https://i.scdn.co/image/ab67616d0000b273ae71c97bfe3e39d1f63e7ebc",
      },
      {
