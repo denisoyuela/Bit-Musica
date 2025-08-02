@@ -259,7 +259,7 @@ body {
  
   .loading-hidden {
     display: none !important ;
-    
+      background-color: #ffffff;
   }
   
   .loading-spinner {
@@ -278,5 +278,6 @@ body {
     100% { transform: rotate(360deg); }
   }
   p{
-   color: white;
+   color: black;
+      background:white ;
   }
