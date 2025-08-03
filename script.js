@@ -374,6 +374,29 @@ const songs = [
         title: "DJ Anemia, crier", artist: "Artista 57", src: "DJ Anemia, crier, sixnite — archangel (Slowed) (Official Visualizer) - DJ Anemia.mp3",  duration: "3:07",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyuzgH9TQyc8Axw4E2_-vNCpcW0c9IJCvXKA&s",
      },
+     {
+        title: " Free-Russian Roulette", artist: "Artista 58", src: " Free-Russian Roulette (nothing,nowhere_guccihighwater type beat) - PRXD. TRXVEL.mp3",  duration: "2:45",
+        cover: "https://i.ytimg.com/vi/cHy-rm3jVQw/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgXihUMA8=&rs=AOn4CLCZamkod7qedzASAJqcpO_5khNtrw",
+     },
+     {
+        title: "Anyma & Rebūke", artist: "Artista 59", src: " Anyma & Rebūke - Syren [Live from Afterlife Tomorrowland] - Afterlife.mp3",  duration: "2:17",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrzBO8gvXQQf24Z7Hh-9Ld0DOwWOu9I0rtQ&s",
+     },
+     {
+        title: "Dj Tiesto   Infinity ", artist: "Artista 60", src: " Dj Tiesto   Infinity - diego zamora.mp3",  duration: "3:09",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOrR5RBZBu3YT6Tbqb3s0yixEcVALZSoPIjw&s",
+     },
+
+     {
+        title: "Galantis - No Money ", artist: "Artista 61", src: " Galantis - No Money (Official Video) - Galantis.mp3",  duration: "3:32",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFP2GuXTjH-2AvxslfmbfsoxohTM-Uicb5JQ&s",
+     }, {
+        title: "Hector Bambino EL Father", artist: "Artista 62", src: " Hector Bambino EL Father, Wisin & Yandel - El Teléfono (Official Video) - Wisin & Yandel Fans.mp3",  duration: "3:58",
+        cover: "https://i.ytimg.com/vi/5ensVGQU9Xg/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGDIgWyhyMA8=&rs=AOn4CLAaYl86L9_OImznLECFE4UXvZUY-A",
+     }, {
+        title: "Galantis - Runaway ", artist: "Artista 63", src: " Galantis - Runaway (U & I) (Official Video) - Galantis.mp3",  duration: "4:24",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmSqgMgzlE45R8svVlZjV09bVKB9hp1fQOA&s",
+     },
     // Agrega más canciones según necesites
 ];
 
