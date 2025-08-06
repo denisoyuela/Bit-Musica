@@ -1,5 +1,12 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
+   {
+        title: "Interstellar Official", artist: "Artista 64 ", src: "Interstellar Official Soundtrack  No Time For Caution – Hans Zimmer  WaterTower - WaterTower Music.mp3",  duration: "4:07",
+        cover: "https://i.ytimg.com/vi/kpK4cDk2bRs/sddefault.jpg",
+     }, {
+        title: "In For It - Tory Lanez", artist: "Artista 65", src: "In For It - Tory Lanez.mp3",  duration: "4:54",
+        cover: "https://i.ytimg.com/vi/Amp86v4Nd8Q/maxresdefault.jpg",
+     },
     {
         title: "oh mi Angel",
         artist: "Artista 1",
