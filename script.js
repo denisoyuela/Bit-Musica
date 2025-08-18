@@ -1,31 +1,34 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
    {
-        title: "Rihanna - Work", artist: "Artista 68", src: "Rihanna - Work ft. Drake - LatinHype.mp3",  duration: "3:36",
+        title: "Work ft. Drake ", artist: "Rihanna", src: "Rihanna - Work ft. Drake - LatinHype.mp3",  duration: "3:36",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9SOOYfgtqlZXS8Ga_hHGiAQLuseONC3wQ9A&s",
      },  {
-        title: "Guns N' Roses ", artist: "Artista 67", src: "Guns N' Roses - Knockin' On Heaven's Door (Visualizer) - GunsNRosesVEVO.mp3",  duration: "5:36",
+        title: "Knockin' On Heaven'", artist: "Guns N' Roses", src: "Guns N' Roses - Knockin' On Heaven's Door (Visualizer) - GunsNRosesVEVO.mp3",  duration: "5:36",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRizfpqveNPVF4JPnP7_qZlE_Udqh6U4F2cfg&s",
      }, {
-        title: "Boy North - Was", artist: "Artista 66", src: "Boy North - Was It The Wind That Stirred The Trees - Another Rhythm Records.mp3",  duration: "5:37",
+        title: "Another Rhythm Records", artist: "Boy North", src: "Boy North - Was It The Wind That Stirred The Trees - Another Rhythm Records.mp3",  duration: "5:37",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW5Nzd-DC36sXaf1SJzg6W6ZZezV12bK5scA&s",
-     }, {
-        title: "Interstellar Official", artist: "Artista 65 ", src: "Interstellar Official Soundtrack  No Time For Caution – Hans Zimmer  WaterTower - WaterTower Music.mp3",  duration: "4:07",
+     },
+
+    {
+        title: "Interstellar ", artist:  "Hans Zimmer", src: "Interstellar Official Soundtrack  No Time For Caution – Hans Zimmer  WaterTower - WaterTower Music.mp3",  duration: "4:07",
         cover: "https://i.ytimg.com/vi/kpK4cDk2bRs/sddefault.jpg",
      }, {
-        title: "In For It - Tory Lanez", artist: "Artista 64", src: "In For It - Tory Lanez.mp3",  duration: "4:54",
+        title: "In For It - ", artist: "Tory Lanez", src: "In For It - Tory Lanez.mp3",  duration: "4:54",
         cover: "https://i.ytimg.com/vi/Amp86v4Nd8Q/maxresdefault.jpg",
      },
-{
+    
+    {
         title: "oh mi Angel",
-        artist: "Artista 1",
+        artist: "Bertha Tillman",
         src: "oh mi Angel.mp3",
         cover: "https://i.scdn.co/image/ab67616d0000b273ce3f7a5726537f3fd14f2188",
         duration: "2:18"
     },
     {
         title: "Travis Scott",
-        artist: "Artista 2",
+        artist: "travis",
         src: "travis.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpVgByNdbDntccUbO5tWmaVCCGVm_EPlCx8w&s",
         duration: "4:12"
@@ -33,56 +36,56 @@ const songs = [
     },
     {
         title: "November South",
-        artist: "Artista 3",
+        artist: "Will Harrison",
         src: "Our Father’s Sins (Official Lyric Video) - November South.mp3",
         cover: "https://i.scdn.co/image/ab676161000051746c08d788686ad7b2f84d9800",
         duration: "3:16"
     },
     {
-        title: "Noah Kahan",
-        artist: "Artista 4",
+        title: " You’re Gonna Go Far ",
+        artist: "Noah Kahan",
         src: "Noah Kahan - You’re Gonna Go Far (Official Lyric Video) - NoahKahanVEVO.mp3",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR_kKJbSMfVMVm873vbzqFqokVjkpEG5aHvA&s",
        duration: "4:46"
     },
     {
         title: "Star Eater",
-        artist: "Artista 5",
+        artist: "Daniel Deluxe",
         src: "Star Eater - Daniel Deluxe.mp3 ",
         cover: "https://cdn-images.dzcdn.net/images/cover/80acb36159cb75f910d44155a0b5df98/500x500-000000-80-0-0.jpg",
        duration: "4:32"
     },
     {
         title: "VEKI VEKI",
-        artist: "Artista 6",
+        artist: "DJZRX",
         src: "VEKI VEKI (Slowed) - DJZRX.mp3 ",
         cover: "https://i.ytimg.com/vi/rpSe5mCdj4k/maxresdefault.jpg",
        duration: "1:34"
     },
     {
-        title: "BigBoa",
-        artist: "Artista 7",
+        title: "Long Distance ",
+        artist: "BigBoa",
         src: "Long Distance - BigBoa.mp3 ",
         cover: "https://i.ytimg.com/vi/7xrwTlPEN5I/0.jpg",
        duration: "1:57"
     },
     {
-        title: "Dream, Ivory",
-        artist: "Artista 8",
+        title: "Welcome and Goodbye",
+        artist: "Dream, Ivory",
         src: "Dream, Ivory - Welcome and Goodbye - David Dean Burkhart.mp3 ",
-        cover: "https://i.ytimg.com/vi/4J0eu55kYWY/0.jpg",
+        cover: "https://cdn-images.dzcdn.net/images/cover/5f4f2cbf313f2f604783a7c608727b83/1900x1900-000000-80-0-0.jpg",
        duration: "2:21"
     },
     {
-        title: "Kirin J Callinan",
-        artist: "Artista 9",
+        title: "Big Enough (feat. Alex Cameron)",
+        artist: "Kirin J Callinan",
         src: "Kirin J Callinan - Big Enough (feat. Alex Cameron) - TERRIBLE RECORDS.mp3 ",
-        cover: "https://i.ytimg.com/vi/L6RsYvaGAIo/0.jpg",
+        cover: "https://i.ytimg.com/vi/sgNeF3eCp_g/mqdefault.jpg",
        duration: "4:44"
     },
     {
-        title: "magic - Medasin",
-        artist: "Artista 10",
+        title: "magic - ",
+        artist: "Medasin",
         src: "magic - Medasin.mp3 ",
         cover: "https://i.ytimg.com/vi/9ytiyD_QA2s/0.jpg",
        duration: "5:57"
