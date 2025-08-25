@@ -386,7 +386,7 @@ const songs = [
         cover: "https://i.ytimg.com/vi/F3qWBh7jZZ0/maxresdefault.jpg",
      },
      {
-        title: " Distant Echoes", artist: "VXLLAIN", src: " - Distant Echoes (4K Official Music Video) - VXLLAIN.mp3",  duration: "3:04",
+        title: " Distant Echoes", artist: "VXLLAIN", src: "VXLLAIN, VØJ, Narvent - Distant Echoes (4K Official Music Video) - VXLLAIN.mp3",  duration: "3:04",
         cover: "https://i.scdn.co/image/ab67616d0000b273ae71c97bfe3e39d1f63e7ebc",
      },
      {
@@ -415,7 +415,19 @@ const songs = [
      }, {
         title: "Runaway ", artist: "Galantis", src: " Galantis - Runaway (U & I) (Official Video) - Galantis.mp3",  duration: "4:24",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmSqgMgzlE45R8svVlZjV09bVKB9hp1fQOA&s",
-     },
+     }, {
+        title: "childhood", artist: "Daniel Vogel", src: " childhood - daniel.mp3.mp3",  duration: "2:10",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFI-IivPoSWft_KNonN-lN8SBI6nWYqgLPzA&s",
+     }, {
+        title: "Mine", artist: "Bazzi", src: " Bazzi – Mine (Lyrics) 🎵 - Pixl Networks.mp3",  duration: "2:15",
+        cover: "https://www.billboard.com/wp-content/uploads/media/Bazzi-Mine-screenshot-billboard-1548.jpg",
+     }, {
+        title: "You look lonely", artist: "mikeeysmind", src: " Simpsonwave (You look lonely) - mikeeysmind.mp3",  duration: "2:43",
+        cover: "https://i1.sndcdn.com/artworks-FlYcoYVn3y5gHLe3-cF8kqQ-t500x500.jpg",
+     }, {
+        title: "Carton – On& On ", artist: "Daniel Levi", src: " Carton – On& On (feat. Daniel Levi)[No Copyright Music][Music safe]-audio4K [FREE]♫ - audio 4k    For Creator 🎧.mp3",  duration: "2:29",
+        cover: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Cartoon_-_On_%26_On.png/250px-Cartoon_-_On_%26_On.png",
+     }, 
     // Agrega más canciones según necesites
 ];
 
