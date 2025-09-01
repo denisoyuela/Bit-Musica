@@ -3,286 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bit Music</title>  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div class="welcome-screen">
-        <div class="background-overlay"></div>
-        
-        <div class="welcome-content">
-            <div class="logo-container">
-                <img src="bitmusic.jpeg" alt="MelodyStream Logo" class="logo">
-               
-
-            
-            <div class="loading-text">Cargando, por favor espere...</div>
-            <div class="loading-bar">
-                <div id="loadingProgress" class="loading-progress"></div>
-            </div>
-            <div id="completionMessage" class="completion-message"> </div>
-        </div>
-    
-        <!-- Audio oculto que se reproduce al finalizar -->
-        <audio id="completionSound" src="tono.mp3"></audio>
-    
-            
-            <div class="welcome-message">
-                <p>Cargando tu experiencia musical...</p>
-            </div>
-            
-            <div class="music-visualizer">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            
-            
-     <button class="skip-btn" id="soundButton"><i class="fas fa-forward">play</i></button>
-    
-    <!-- Elemento audio (oculto) -->
-    <audio id="myAudio" src="tono.mp3"></audio>
-    
-        </div>
-        
-        <div class="version-info">
-            v1.0.0 · © 2025 Bit Music
-        </div>
-    </div>
-    
-</div>
+    <title>bit-music</title>
+    <!-- Incluimos Tailwind CSS para un estilo rápido y profesional -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usamos una fuente moderna para el texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    overflow: hidden;
-    height: 100vh;
-}
-
-.welcome-screen {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-   
-}
-.loading-bar {
-            width: 100%;
-            height: 20px;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
+        body {
+            font-family: 'Inter', sans-serif;
         }
-
-        .loading-progress {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #4CAF50, #2E7D32);
-            border-radius: 10px;
-            transition: width 0.5s ease;
-        }
-
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    }
-
-.welcome-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    width: 90%;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;  
-   
-}
-
-
-
-.loading-container {
-    display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; 
-            padding: 20px;
-            border-radius: 20px;
-            color: black;
-        }
-        
-      
-
-.textos{
-    width: 100px;
-
-}
-.logo-container {
-    margin-bottom: 2rem;
-    animation: fadeInDown 1s ease-out;
-   
-}
-
-.logo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-}
-
-
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-}
-
-h1 span {
-    color: #16ec56;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
-    animation: fadeIn 1.5s ease-out;
-}
-
-.loading-bar {
-    width: 100%;
-    height: 6px;
-    background: #fff;
-    border-radius: 3px;
-    margin: 2rem auto;
-    overflow: hidden;
-    animation: fadeIn 2s ease-out;
-}
-
-.loading-progress {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, 
-    #0846f1 ,
-    #c816ec , 
-    #0846f1 , 
-    #16ecb6 );
-    border-radius: 3px;
-    transition: width 0.3s ease;
-   
-}
-
-.welcome-message {
-    margin: 2rem 0;
-    font-size: 1.1rem;
-    animation: fadeIn 2.5s ease-out;
-}
-
-.music-visualizer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 60px;
-    margin: 2rem 0;
-    gap: 8px;
-}
-
-.music-visualizer .bar {
-    width: 10px;
-    height: 10px;
-    background: #16ec56;
-    border-radius: 5px;
-    animation: equalize 1.5s infinite ease-in-out;
-}
-
-.music-visualizer .bar:nth-child(1) {
-    animation-delay: 0.1s;
-}
-.music-visualizer .bar:nth-child(2) {
-    animation-delay: 0.3s;
-    background: #ffffff;
-}
-.music-visualizer .bar:nth-child(3) {
-    animation-delay: 0.5s;
-}
-.music-visualizer .bar:nth-child(4) {
-    animation-delay: 0.2s;
-    background: #ffffff;
-}
-.music-visualizer .bar:nth-child(5) {
-    animation-delay: 0.4s;
-}
-.music-visualizer .bar:nth-child(6) {
-    animation-delay: 0.4s;
-    background: #ffffff;
-}
-
-.skip-btn {
-    padding: 10px 20px;
-    background: white;
-    color: black;
-    border-radius: 7px;
-    cursor: pointer;
-    position: relative;
-    border: none;
-}
-
-.skip-btn::before{
-    content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            z-index: -1;
-            background: linear-gradient(45deg, 
-            #0846f1, #c816ec, #0846f1, #16ecb6 , 
-            #0846f1, #c816ec, #16ecb6);
-            background-size: 400% 400%;
-            border-radius: 7px;
-            animation: gradientBorder 3s ease infinite;
-        
-}
-@keyframes gradientBorder {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
-
-
-
-
-.skip-btn i {
-    font-size: 0.8rem;
-}
-
-.version-info {
+        .version-info {
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -290,123 +20,35 @@ h1 span {
     opacity: 0.7;
     z-index: 10;
 }
-
-/* Animaciones */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes equalize {
-    0%, 100% {
-        height: 10px;
-    }
-    50% {
-        height: 50px;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .logo {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .tagline {
-        font-size: 1rem;
-    }
-}
     </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const skipBtn = document.getElementById('skipBtn');
-    const progressBar = document.querySelector('.progress');
-    const welcomeMessage = document.querySelector('.welcome-message p');
-    const messages = [
-        "Bienvenido a Bit Music...",
-        "Conectando con los servidores...",
-        "Cargando tus listas de reproducción...",
-        "¡Listo para disfrutar de tu música! "
-    ];
-    
-   
-    document.getElementById('soundButton').addEventListener('click', function() {
-            var audio = document.getElementById('myAudio');
-            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
-            audio.play();
-            setTimeout(() => {
-                // Cambia esta URL por la de tu sistema real
-                window.location.href = "presentacion.html";
-            }, 2000);
-            
-        });
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
+    <!-- Contenedor principal de la bienvenida -->
+    <div class="text-center space-y-8 bg-gray-800 p-8 md:p-12 rounded-3xl shadow-2xl max-w-lg mx-auto transform transition-transform duration-500 hover:scale-105">
+        <!-- Ícono o emoji de música -->
+        <div class="text-6xl md:text-8xl text-indigo-400 animate-pulse">
+            &#x266B; <!-- Emoji de nota musical -->
+        </div>
 
-       
+        <!-- Título del reproductor de música -->
+        <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 drop-shadow-lg">
+            Bit Music
+        </h1>
 
-    
-    // Efecto de visualización de música aleatoria
-    const bars = document.querySelectorAll('.music-visualizer .bar');
-    setInterval(() => {
-        bars.forEach(bar => {
-            // 30% de probabilidad de que la barra se active
-            if (Math.random() < 0.3) {
-                bar.style.animation = 'none';
-                bar.offsetHeight; // Trigger reflow
-                bar.style.animation = 'equalize 1.5s infinite ease-in-out';
-            }
-        });
-    }, 300);
-});  
+        <!-- Mensaje de bienvenida -->
+        <p class="text-lg md:text-xl text-gray-300">
+            Tu música, a tu manera.
+            <br>
+            Crea tu banda sonora perfecta y sumérgete en el ritmo.
+        </p>
 
-document.addEventListener('DOMContentLoaded', function() {
-            const loadingProgress = document.getElementById('loadingProgress');
-            const completionMessage = document.getElementById('completionMessage');
-            const completionSound = document.getElementById('completionSound');
-            let progress = 0;
-
-            // Iniciar carga automáticamente
-            const loadingInterval = setInterval(() => {
-                progress += Math.random() * 10; // Incremento aleatorio para simular carga real
-                if (progress >= 100) {
-                    progress = 100;
-                    clearInterval(loadingInterval);
-
-                    // Mostrar mensaje de completado
-                    completionMessage.style.display = "block";
-
-                    // Reproducir sonido
-                    completionSound.currentTime = 0;
-                    completionSound.play();
-                    setTimeout(() => {
-                // Cambia esta URL por la de tu sistema real
-                window.location.href = "presentacion.html";
-            }, 1500);
-                }
-
-                // Actualizar barra de progreso
-                loadingProgress.style.width = progress + '%';
-            }, 250); // Velocidad de carga (ms)
-             // Mostrar el loading después de 3 segundos (3000 milisegundos)
-        setTimeout(function() {
-            document.getElementById('loading').style.display = 'flex';
-        }, 9000);
-        });
-    </script>
+        <!-- Botón para empezar que simula la redirección -->
+        <a href="presentacion.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+            Ir al reproductor
+        </a>
+    </div>
+    <div class="version-info">
+        v2.0.0 · © 2025 BIT CODEU/company
+    </div>
 </body>
 </html>
