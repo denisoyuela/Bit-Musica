@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bit-music</title>
     <!-- Incluimos Tailwind CSS para un estilo rápido y profesional -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">  
+    </script>
     <!-- Usamos una fuente moderna para el texto -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
@@ -20,6 +21,46 @@
     opacity: 0.7;
     z-index: 10;
 }
+
+.skip-btn {
+    padding: 10px 20px;
+    background: rgb(133, 73, 243);
+    color: white;
+    border-radius: 7px ;
+    cursor: pointer;
+    position: relative;
+    border:none;
+
+}
+.skip-btn::before{
+    content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: linear-gradient(45deg, 
+            #0846f1, #c816ec, #ffffff, #16ecb6 , 
+            #ffffff, #c816ec, #16ecb6);
+            background-size: 400% 400%;
+            border-radius: 7px;
+            animation: gradientBorder 3s ease infinite;
+        
+}
+@keyframes gradientBorder {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+
+
+
+.skip-btn i {
+    font-size: 1.1rem;
+}
+
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
@@ -41,14 +82,14 @@
             <br>
             Crea tu banda sonora perfecta y sumérgete en el ritmo.
         </p>
-
-        <!-- Botón para empezar que simula la redirección -->
-        <a href="presentacion.html" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
-            Ir al reproductor
-        </a>
+        <button class="skip-btn" id="soundButton"><i class="fas fa-forward">Ir al reproductor</i></button>
+    
+        <!-- Elemento audio (oculto) -->
+        <audio id="myAudio" src="tono.mp3"></audio>
     </div>
     <div class="version-info">
         v2.0.0 · © 2025 BIT CODEU/company
     </div>
+    <script src="tono.js"></script>
 </body>
 </html>
