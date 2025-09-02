@@ -1,6 +1,12 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-   {
+  {
+        title: " Montagem Mysterious", artist: "LXNGVX", src: "LXNGVX - Montagem Mysterious Game (Official Music) - LXNGVX.mp3",  duration: "1:43",
+        cover: "https://i.scdn.co/image/ab67616d0000b273478d1f4434f354e244f6ec06",
+     }, {
+        title: "smezir_2 (Slowed)", artist: "ilyhiryu", src: "ilyhiryu - smezir_2 (Slowed) - void.mp3",  duration: "4:00",
+        cover: "https://i.scdn.co/image/ab67616d0000b2733e0e5b15b6a6a0d054277043",
+     }, {
         title: "Work ft. Drake ", artist: "Rihanna", src: "Rihanna - Work ft. Drake - LatinHype.mp3",  duration: "3:36",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9SOOYfgtqlZXS8Ga_hHGiAQLuseONC3wQ9A&s",
      },  {
