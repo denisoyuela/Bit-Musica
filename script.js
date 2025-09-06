@@ -1,7 +1,7 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
   {
-        title: "#voyuitwaaien", artist: "latex fruit", src: "#voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
+        title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwi6RjObi8gfJfydASsTnhX00dttn8GpPBgQ&s",
      }, {
         title: "Death Is No More", artist: "NEDOSTUPNOSTЬ", src: "BLESSED MANE - Death Is No More - NEDOSTUPNOSTЬ.mp3",  duration: "2:19",
