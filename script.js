@@ -660,3 +660,86 @@ window.addEventListener('DOMContentLoaded', checkConnection);
 setInterval(checkConnection, 30000);
 // Inicializar
 initPlayer();
+
+class OnlineStatus {
+    constructor() {
+        this.statusDot = document.getElementById('statusDot');
+        this.statusText = document.getElementById('statusText');
+        this.init();
+    }
+
+    init() {
+        // Verificar estado inicial
+        this.checkOnlineStatus();
+        
+        // Escuchar cambios en la conexión
+        window.addEventListener('online', () => this.handleOnline());
+        window.addEventListener('offline', () => this.handleOffline());
+        
+        // Verificar periódicamente (cada 30 segundos)
+        setInterval(() => this.checkOnlineStatus(), 30000);
+    }
+
+    checkOnlineStatus() {
+        if (navigator.onLine) {
+            this.handleOnline();
+        } else {
+            this.handleOffline();
+        }
+    }
+
+    handleOnline() {
+        this.statusDot.className = 'status-dot status-online';
+        this.statusText.textContent = 'En línea';
+        this.showNotification('', 'success');
+    }
+
+    handleOffline() {
+        this.statusDot.className = 'status-dot status-offline';
+        this.statusText.textContent = 'Sin conexión';
+        this.showNotification('', 'error');
+    }
+
+    showNotification(message, type) {
+        // Crear notificación temporal
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: ${type === 'success' ? '#28a745' : '#dc3545'};
+            color: white;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        `;
+        notification.textContent = message;
+        
+        document.body.appendChild(notification);
+        
+        // Remover después de 3 segundos
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+}
+
+// Función para simular cambios de conexión (solo para pruebas)
+function simulateConnectionChange() {
+    if (navigator.onLine) {
+        // Simular offline
+        const offlineEvent = new Event('offline');
+        window.dispatchEvent(offlineEvent);
+    } else {
+        // Simular online
+        const onlineEvent = new Event('online');
+        window.dispatchEvent(onlineEvent);
+    }
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    new OnlineStatus();
+});
