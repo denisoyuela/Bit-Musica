@@ -695,15 +695,15 @@ class OnlineStatus {
     }
 
     handleOnline() {
-        this.statusDot.className = 'status-dot status-online';
+        this.statusDot.className = 'status-doyo status-online';
         this.statusText.textContent = 'En línea';
-        this.showNotification('', 'success');
+        this.showNotification('BIT MUSIC', 'success');
     }
 
     handleOffline() {
-        this.statusDot.className = 'status-dot status-offline';
+        this.statusDot.className = 'status-doyo status-offline';
         this.statusText.textContent = 'Sin conexión';
-        this.showNotification('', 'error');
+        this.showNotification('Revisa tu conexion', 'error');
     }
 
     showNotification(message, type) {
