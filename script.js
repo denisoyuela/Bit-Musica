@@ -697,7 +697,7 @@ class OnlineStatus {
     handleOnline() {
         this.statusDot.className = 'status-doyo status-online';
         this.statusText.textContent = 'En línea';
-        this.showNotification('BIT MUSIC', 'success');
+        this.showNotification('Bit Music', 'success');
     }
 
     handleOffline() {
