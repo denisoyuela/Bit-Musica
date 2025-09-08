@@ -184,8 +184,11 @@ body {
    
 }
 #search-input:hover{
-    background: #fff;
-    color: rgb(17, 17, 17);
+    background:#fff ;
+    color: #16213e;
+}
+::placeholder{
+    color: #fff;
 }
 #search-btn {
     background: none;
