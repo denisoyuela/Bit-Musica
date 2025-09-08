@@ -663,7 +663,7 @@ window.addEventListener('offline', () => {
 window.addEventListener('DOMContentLoaded', checkConnection);
 
 // Verificar periódicamente (cada 30 segundos)
-setInterval(checkConnection, 30000);
+setInterval(checkConnection, 90000);
 // Inicializar
 initPlayer();
 
@@ -697,13 +697,13 @@ class OnlineStatus {
     handleOnline() {
         this.statusDot.className = 'status-doyo status-online';
         this.statusText.textContent = 'En línea';
-        this.showNotification('Bit Music', 'success');
+        this.showNotification('Vuelves a tener conexión', 'success');
     }
 
     handleOffline() {
         this.statusDot.className = 'status-doyo status-offline';
         this.statusText.textContent = 'Sin conexión';
-        this.showNotification('Revisa tu conexion', 'error');
+        this.showNotification('No hay conexión', 'error');
     }
 
     showNotification(message, type) {
