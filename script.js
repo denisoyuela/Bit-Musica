@@ -749,3 +749,16 @@ function simulateConnectionChange() {
 document.addEventListener('DOMContentLoaded', () => {
     new OnlineStatus();
 });
+// sonido de button play siguiente ,retroceder
+document.getElementById('prev-btn').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();});
+    document.getElementById('play-btn').addEventListener('click', function() {
+        var audio = document.getElementById('myAudio');
+        audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+        audio.play();});
+        document.getElementById('next-btn').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+            audio.play();});
