@@ -1,7 +1,9 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-  {
-        title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
+   { title: "", artist: "", src: ".mp3",  duration: "",
+        cover: "",
+     },
+  { title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwi6RjObi8gfJfydASsTnhX00dttn8GpPBgQ&s",
      }, {
         title: "Death Is No More", artist: "NEDOSTUPNOSTЬ", src: "BLESSED MANE - Death Is No More - NEDOSTUPNOSTЬ.mp3",  duration: "2:19",
@@ -750,15 +752,9 @@ document.addEventListener('DOMContentLoaded', () => {
     new OnlineStatus();
 });
 // sonido de button play siguiente ,retroceder
-document.getElementById('prev-btn').addEventListener('click', function() {
-    var audio = document.getElementById('myAudio');
-    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
-    audio.play();});
+
     document.getElementById('play-btn').addEventListener('click', function() {
         var audio = document.getElementById('myAudio');
         audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
         audio.play();});
-        document.getElementById('next-btn').addEventListener('click', function() {
-            var audio = document.getElementById('myAudio');
-            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
-            audio.play();});
+      
