@@ -1,9 +1,10 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-   { title: "", artist: "", src: ".mp3",  duration: "",
-        cover: "",
-     },
-  { title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
+ {
+        title: "Narvent - Memory Reboot", artist: "VØJ", src: "VØJ, Narvent - Memory Reboot (Sped Up  4K Music Video) - Narvent.mp3",  duration: "",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_kW62IAuW3s2dE9ehWDTEkp8v1hT8idUVA&s",
+     }, {
+        title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwi6RjObi8gfJfydASsTnhX00dttn8GpPBgQ&s",
      }, {
         title: "Death Is No More", artist: "NEDOSTUPNOSTЬ", src: "BLESSED MANE - Death Is No More - NEDOSTUPNOSTЬ.mp3",  duration: "2:19",
@@ -48,7 +49,7 @@ const songs = [
         duration: "4:12"
        
     },
-   {
+    {
         title: "November South",
         artist: "Will Harrison",
         src: "Our Father’s Sins (Official Lyric Video) - November South.mp3",
@@ -80,7 +81,7 @@ const songs = [
         title: "Long Distance ",
         artist: "BigBoa",
         src: "Long Distance - BigBoa.mp3 ",
-        cover: "https://i.ytimg.com/vi/7xrwTlPEN5I/0.jpg",
+        cover: "https://i.scdn.co/image/ab67616d0000b273c635af22a8b9296d4be223f4",
        duration: "1:57"
     },
     {
@@ -101,14 +102,14 @@ const songs = [
         title: "magic - ",
         artist: "Medasin",
         src: "magic - Medasin.mp3 ",
-        cover: "https://i.ytimg.com/vi/9ytiyD_QA2s/0.jpg",
+        cover: "https://i1.sndcdn.com/artworks-fYc5QnZF88cM-0-t500x500.jpg",
        duration: "5:57"
     },
     {
         title: " Let Go",
         artist: "Ark Patrol",
         src: "Ark Patrol - Let Go (feat. Veronika Redd) - MrSuicideSheep.mp3 ",
-        cover: "https://i.ytimg.com/vi/Ts5ZiojkOe4/0.jpg",
+        cover: "https://i.scdn.co/image/ab67616d0000b27331e9a5c86d008b6422462d40",
        duration: "4:08"
     },
     {
@@ -437,7 +438,7 @@ const songs = [
         cover: "https://www.billboard.com/wp-content/uploads/media/Bazzi-Mine-screenshot-billboard-1548.jpg",
      }, {
         title: "You look lonely", artist: "mikeeysmind", src: " Simpsonwave (You look lonely) - mikeeysmind.mp3",  duration: "2:43",
-        cover: "https://i1.sndcdn.com/artworks-FlYcoYVn3y5gHLe3-cF8kqQ-t500x500.jpg",
+        cover: "https://i1.sndcdn.com/artworks-rqPypCPqZBuf-0-t500x500.jpg",
      }, {
         title: "Carton – On& On ", artist: "Daniel Levi", src: " Carton – On& On (feat. Daniel Levi)[No Copyright Music][Music safe]-audio4K [FREE]♫ - audio 4k    For Creator 🎧.mp3",  duration: "2:29",
         cover: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Cartoon_-_On_%26_On.png/250px-Cartoon_-_On_%26_On.png",
