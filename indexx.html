@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .album-art {
+            aspect-ratio: 1 / 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-4 sm:p-6 lg:p-8">
 
+    <div class="max-w-4xl mx-auto">
+        <!-- Main Player -->
+        <div class="bg-gray-800 rounded-2xl p-6 mb-8 shadow-2xl">
+            <h1 class="text-3xl font-bold mb-4">Música</h1>
+
+            <!-- Current Song Display -->
+            <div class="flex flex-col items-center text-center">
+                <img id="current-album-art" src="https://placehold.co/400x400/1f2937/d1d5db?text=Album+Art" alt="Album Art" class="album-art w-full max-w-sm rounded-2xl shadow-xl mb-4 transition-transform duration-300 ease-in-out">
+                <h2 id="current-title" class="text-xl font-bold">Sin seleccionar</h2>
+                <p id="current-artist" class="text-gray-400">Selecciona una canción</p>
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="mt-8">
+                <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden mb-4">
+                    <div id="progress-bar" class="h-1 bg-blue-500 rounded-full w-0 transition-all duration-100 ease-linear"></div>
+                </div>
+
+                <div class="flex justify-center items-center space-x-6 text-2xl">
+                    <button id="prev-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
+                    </button>
+                    <button id="play-pause-btn" class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-400 transition-colors duration-200">
+                        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
+                        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                    </button>
+                    <button id="next-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <div class="space-y-8">
+            <!-- Para Ti (For You) Section -->
+            <section class="bg-gray-800 rounded-2xl p-6 shadow-2xl">
+                <h2 class="text-xl font-bold mb-4">Para Ti</h2>
+                <div id="for-you-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <!-- Dynamic content will go here -->
+                </div>
+            </section>
+
+            <!-- Library Section -->
+            <section class="bg-gray-800 rounded-2xl p-6 shadow-2xl">
+                <h2 class="text-xl font-bold mb-4">Biblioteca</h2>
+                <div class="mb-4">
+                    <input type="text" id="search-bar" placeholder="Buscar en tu biblioteca..." class="w-full p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200">
+                </div>
+                <div id="library-list" class="space-y-4">
+                    <!-- Song list will be populated here -->
+                </div>
+            </section>
+        </div>
+
+        <audio id="audio-player"></audio>
+    </div>
+
+    <script src="playlist.js"></script>
+</body>
+</html>
