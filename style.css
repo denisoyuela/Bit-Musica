@@ -6,7 +6,7 @@
 }
 
 body {
-   background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -22,13 +22,14 @@ body {
     width: 90%;
     max-width: 400px;
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
+background:rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     margin: 0;
     background-position: center;
     background-size: cover;
+    
 }
 
 .album-art {
@@ -107,7 +108,7 @@ body {
 
 .progress-container span {
     font-size: 0.8rem;
-    color:#ffffff;
+    color: #ffffff;
     min-width: 40px;
 }
 
@@ -151,7 +152,10 @@ body {
     background: #1ed760;
 }
 
-.playlist-container {
+
+   
+
+.playlist-container{
     background: url(Music.jpeg);
     border-radius: 10px ;
     padding: 15px;
@@ -159,8 +163,22 @@ body {
    margin: 0;
    background-position: center;
    background-size: cover;
+   transition: all 0.9s ease;
 }
-
+.playlist-container.hidden{
+    opacity: 0;
+            transform: translateY(-20px);
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+}
+.playlist-container.visible{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+}
 .playlist-container h3 {
     margin-bottom: 15px;
     display: flex;
@@ -190,6 +208,7 @@ body {
 ::placeholder{
     color: #fff;
 }
+
 #search-btn {
     background: none;
     border: none;
@@ -215,7 +234,7 @@ body {
 }
 
 #playlist li {
-   padding: 10px;
+    padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -262,14 +281,29 @@ body {
         height: 150px;
     }
 }
- 
+/* En tu archivo CSS */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9999;
+  }
+  
   .loading-hidden {
-    display: none !important ;
-      background-color: #ffffff;
+    display:none !important;
+    background-color: #ffffff;
   }
   
   .loading-spinner {
-    border: 5px solid #f3f3f3;
+    border: 5px solid ;
     border-top: 5px solid #3498db;
     border-radius: 50%;
     width: 50px;
@@ -284,10 +318,10 @@ body {
     100% { transform: rotate(360deg); }
   }
   p{
-   color: black;
-  }
+   color:black;
 
- .status-doyo{
+  }
+  .status-doyo{
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -311,8 +345,13 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
 
+    display: block;
+    webkit-user-select: none;
+    margin: auto;
+    background-color: hls (0, 0%, 90%);
+    transition:  background-color 300ms;
+  }
 .status-online {
     background-color: #28a745;
 }
@@ -328,3 +367,39 @@ body {
 .content {
     text-align: center;
 }
+
+.toggle-button{
+    padding: 5px 10px;
+    background:#3498db;
+    color: white;
+    border-radius: 7px ;
+    cursor: pointer;
+    position: relative;
+    border:none;
+transition: all 0.3s;
+display: block;
+margin: 10px auto;
+font-size: 1.1rem;
+}
+.toggle-button::before{
+    content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: linear-gradient(45deg, 
+            #0846f1, #c816ec, #ffffff, #16ecb6 , 
+            #ffffff, #c816ec, #16ecb6);
+            background-size: 400% 400%;
+            border-radius: 7px;
+            animation: gradientBorder 3s ease infinite;
+        
+}
+@keyframes gradientBorder {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
