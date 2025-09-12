@@ -10,7 +10,7 @@
 <body>
     <div class="player-container">
          <div class="status-doyo status-online" id="statusDot">
-    <div class="status-dot"><img src="https://scontent.fsap4-1.fna.fbcdn.net/v/t39.30808-6/504893172_1904074510395094_8381062767533708188_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lO5SuEnXE6EQ7kNvwGiA1jO&_nc_oc=AdnTy0RqmTx12UKdbUbzQak8OUYXCWynTWJm5_Ez15zYc3ajLyx6bS3TEXR_Fe36m1g&_nc_zt=23&_nc_ht=scontent.fsap4-1.fna&_nc_gid=YkVAJuyQ1AZObpaASZOPNw&oh=00_Afb1RInaPA0cSV2DUXl8yzNSeCjab_32xh3mTLQBN_33fw&oe=68C2CE9D" alt="Online"></div>
+    <div class="status-dot"><img src="https://scontent.fsap4-1.fna.fbcdn.net/v/t39.30808-6/536271085_1363699339092530_2073703411777027719_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=63qPaeSwVcAQ7kNvwEy7ync&_nc_oc=AdncyfrORYNuVN0_DVAr68PBR6vOvdkyYbfBWMFn4fD8VKHhJoZxOAZeTBZJ0keiS7E&_nc_zt=23&_nc_ht=scontent.fsap4-1.fna&_nc_gid=fnqddnkpGbiu16L7dNHX5w&oh=00_Afb6UhIugtiMRfShjBMdWd9ocHa7XIx8G3XNQT3KMiGZyw&oe=68CA5B39" alt="Online"></div>
 </div>
         <span id="statusText"></span>
         <div class="player">
@@ -40,9 +40,11 @@
                 <button id="repeat-btn"><i class="fas fa-redo"></i></button>
                  <audio id="myAudio" src="dead.mp3"></audio>
             </div>
-            
-            <div class="playlist-container">
-                <h3><i class="fas fa-list"></i> Lista de reproducción</h3>
+           
+            <button id="toggleButton" class="toggle-button">Lista de Canciones</button>
+            <div class="countdown" id="countdown"></div>
+            <div class="playlist-container" id="toggleDiv">
+               
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="Buscar canción...">
                     <button id="search-btn"><i class="fas fa-search"></i></button>
