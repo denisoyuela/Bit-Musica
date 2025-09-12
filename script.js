@@ -1,7 +1,7 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
- {
-        title: "Narvent - Memory Reboot", artist: "VØJ", src: "VØJ, Narvent - Memory Reboot (Sped Up  4K Music Video) - Narvent.mp3",  duration: "",
+{
+        title: "Narvent - Memory Reboot", artist: "VØJ", src: "VØJ, Narvent - Memory Reboot (Sped Up  4K Music Video) - Narvent.mp3",  duration: "2:47",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_kW62IAuW3s2dE9ehWDTEkp8v1hT8idUVA&s",
      }, {
         title: "#voyuitwaaien", artist: "latex fruit", src: "voyuitwaaien (SUPER slowed + reverb) - latex fruit.mp3",  duration: "2:00",
@@ -443,6 +443,7 @@ const songs = [
         title: "Carton – On& On ", artist: "Daniel Levi", src: " Carton – On& On (feat. Daniel Levi)[No Copyright Music][Music safe]-audio4K [FREE]♫ - audio 4k    For Creator 🎧.mp3",  duration: "2:29",
         cover: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Cartoon_-_On_%26_On.png/250px-Cartoon_-_On_%26_On.png",
      }, 
+     
     // Agrega más canciones según necesites
 ];
 
@@ -627,18 +628,6 @@ audioPlayer.addEventListener('ended', () => {
     }
 });
 
-progressBar.addEventListener('input', (e) => {
-    const seekTime = (e.target.value / 100) * audioPlayer.duration;
-    audioPlayer.currentTime = seekTime;
-});
-
-shuffleBtn.addEventListener('click', shufflePlaylist);
-repeatBtn.addEventListener('click', toggleRepeat);
-
-searchBtn.addEventListener('click', searchSong);
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') searchSong();
-});
 // En tu archivo JavaScript
 const loadingOverlay = document.getElementById('loading-overlay');
 
@@ -666,7 +655,7 @@ window.addEventListener('offline', () => {
 window.addEventListener('DOMContentLoaded', checkConnection);
 
 // Verificar periódicamente (cada 30 segundos)
-setInterval(checkConnection, 90000);
+setInterval(checkConnection, 30000);
 // Inicializar
 initPlayer();
 
@@ -686,7 +675,7 @@ class OnlineStatus {
         window.addEventListener('offline', () => this.handleOffline());
         
         // Verificar periódicamente (cada 30 segundos)
-        setInterval(() => this.checkOnlineStatus(), 30000);
+        setInterval(() => this.checkOnlineStatus(), 90000);
     }
 
     checkOnlineStatus() {
@@ -752,10 +741,65 @@ function simulateConnectionChange() {
 document.addEventListener('DOMContentLoaded', () => {
     new OnlineStatus();
 });
-// sonido de button play siguiente ,retroceder
 
+// sonido de button play 
     document.getElementById('play-btn').addEventListener('click', function() {
         var audio = document.getElementById('myAudio');
         audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
         audio.play();});
-      
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+            audio.play();});
+       
+        // ocultar lista de musica
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleDiv = document.getElementById('toggleDiv');
+            const showButton = document.getElementById('toggleButton');
+            const countdownEl = document.getElementById('countdown');
+            
+            let countdown;
+            let secondsLeft = 59;
+            
+            // Función para iniciar el contador de ocultado automático
+            function startCountdown() {
+                secondsLeft = 59;
+                countdownEl.textContent = ` ${secondsLeft}`;
+                
+                clearInterval(countdown);
+                
+                countdown = setInterval(function() {
+                    secondsLeft--;
+                    countdownEl.textContent =  `${secondsLeft} `;
+                    
+                    if (secondsLeft <= 0) {
+                        clearInterval(countdown);
+                        hideDiv();
+                    }
+                }, 1000);
+            }
+            
+            // Función para ocultar el div
+            function hideDiv() {
+                toggleDiv.classList.remove('visible');
+                toggleDiv.classList.add('hidden');
+                showButton.disabled = false;
+                countdownEl.textContent = '';
+            }
+            
+            // Función para mostrar el div
+            function showDiv() {
+                toggleDiv.classList.remove('hidden');
+                toggleDiv.classList.add('visible');
+                showButton.disabled = true;
+                
+                // Iniciar el contador para ocultar automáticamente
+                startCountdown();
+            }
+            
+            // Configurar el evento click para el botón
+            showButton.addEventListener('click', showDiv);
+            
+            // Iniciar el contador inicial
+            startCountdown();
+        });
