@@ -26,11 +26,12 @@ background:rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 0;
+    margin: auto;
     background-position: center;
     background-size: cover;
     
 }
+
 
 .album-art {
     width: 200px;
@@ -158,7 +159,7 @@ background:rgba(255, 255, 255, 0.1);
 .playlist-container{
     background: url(Music.jpeg);
     border-radius: 10px ;
-    padding: 15px;
+    padding: 17px;
    border: transparent;
    margin: 0;
    background-position: center;
@@ -370,7 +371,7 @@ background:rgba(255, 255, 255, 0.1);
 
 .toggle-button{
     padding: 5px 10px;
-    background:#3498db;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
     color: white;
     border-radius: 7px ;
     cursor: pointer;
@@ -379,27 +380,14 @@ background:rgba(255, 255, 255, 0.1);
 transition: all 0.3s;
 display: block;
 margin: 10px auto;
-font-size: 1.1rem;
+font-size: 1.irem;
 }
-.toggle-button::before{
-    content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            z-index: -1;
-            background: linear-gradient(45deg, 
-            #0846f1, #c816ec, #ffffff, #16ecb6 , 
-            #ffffff, #c816ec, #16ecb6);
-            background-size: 400% 400%;
-            border-radius: 7px;
-            animation: gradientBorder 3s ease infinite;
-        
-}
-@keyframes gradientBorder {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
 
+        .countdown{  
+            text-align: center;
+        }
+        .toggle-button b{
+        font-size: 1.2rem;
+       }
+        
+        
