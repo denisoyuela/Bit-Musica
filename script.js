@@ -1,6 +1,17 @@
 // Lista de canciones (puedes agregar más)
-const songs = [
-    {
+const songs = [ 
+    { title: "Do Ya Like x Resonance", artist: "marcella", src: "Do Ya Like x Resonance - marcella.mp3",  duration: "3:40",
+     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5xb3RSzCXFzro6BR0bSdwajZmMswpjhE9A&s",
+    }, {
+        title: " Sure Thing ", artist: "Miguel", src: "Miguel - Sure Thing (Official Video) - MiguelVEVO.mp3",  duration: "3:22",
+        cover: "https://i.ytimg.com/vi/esKJ8BbauGk/maxresdefault.jpg",
+     }, {
+        title: "Whatcha Say", artist: "Jason", src: "Jason Derulo - Whatcha Say [Official Music Video] - Jason Derulo.mp3",  duration: "3:43",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbhJPJmLmjqpRzr7Qun3Y_qaL6Fxc5mq16Q&s",
+     },{
+        title: " CAN'T STOP THE FEELING", artist: "Justin Timberlake", src: "Justin Timberlake - CAN'T STOP THE FEELING! (from DreamWorks Animation's TROLLS) (Official Video) - justintimberlakeVEVO.mp3",  duration: "3:46",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUOF3fH8Ptz4DNOE42h3kmvT3LvDZGMZPLDg&s",
+     },  {
         title: "Narvent - Memory Reboot", artist: "VØJ", src: "VØJ, Narvent - Memory Reboot (Sped Up  4K Music Video) - Narvent.mp3",  duration: "2:47",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_kW62IAuW3s2dE9ehWDTEkp8v1hT8idUVA&s",
      }, {
