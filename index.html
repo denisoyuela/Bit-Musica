@@ -145,9 +145,14 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="audioDiv">
         <h1><i class="fas fa-music"></i> Bit Music</h1>
         
+        <audio id="Audio" >
+            <source src="Higher Consciousness (Epic Background Music) - Fearless Motivation Instrumentals.mp3" type="audio/mp3">
+        </audio>
+
+
         <div class="button-grid">
             <div class="button-wrapper">
                 <h3 class="button-title">Tu música, bariada</h3>
@@ -179,20 +184,13 @@
             
             <div class="button-wrapper">
                 <h3 class="button-title">Tu música, Clasica</h3>
-                <p class="button-description">Usando un emoji como icono (compatible con todos los navegadores)</p>
-                <button class="btn btn-emoji">
+                <p class="button-description">Difruta de tu música clasica y sumérgete en el ritmo.</p>
+                <button class="btn btn-emoji" id="clasica">
                     🎵 Lista
                 </button>
             </div>
             
-            <div class="button-wrapper">
-                <h3 class="button-title">Usando Imagen</h3>
-                <p class="button-description">Icono incorporado mediante una imagen externa</p>
-                <button class="btn btn-img">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZD0iTTE1LDZIM1Y4SDE1VjZNMTUsMTBIM1YxMkgxNVYxMk0zLDE2SDExVjE0SDNWMTZNMTcsNlYxOEgyMVY2SDE3WiIvPjwvc3ZnPg==" alt="Lista" width="20" height="20">
-                    Mi Música
-                </button>
-            </div>
+           
         </div>
         
         <div class="footer">
@@ -231,6 +229,27 @@ document.getElementById('requeton').addEventListener('click', function() {
     }, 2000);
     
 });
+document.getElementById('clasica').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "clasica.html";
+    }, 2000);
+    
+});
+const audioDiv = document.getElementById('audioDiv');
+        const audio = document.getElementById('Audio');
+        
+        audioDiv.addEventListener('mouseenter', function() {
+            audio.play();
+        });
+        
+        audioDiv.addEventListener('mouseleave', function() {
+            audio.pause();
+            audio.currentTime = 0;
+        });
     </script>
 </body>
 </html>
