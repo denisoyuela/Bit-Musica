@@ -4,7 +4,11 @@
    // cover: "",
  
    const songs = [
-   
+   { title: " & Nelph - It Cost", artist: "JUCZ", src: "JuCz & Nelph - It Cost - JUCZ.mp3",  duration: "4:27",
+   cover: "https://m.media-amazon.com/images/I/51oAwuaw4vL._UXNaN_FMjpg_QL85_.jpg",
+},  { title: "Accidentally In Love", artist: "Counting Crows ", src: "Counting Crows - Accidentally In Love (Lyric Video) - Love Life Lyrics.mp3",  duration: "4:11",
+ cover: "https://i.ytimg.com/vi/xgyT0z7-5ts/maxresdefault.jpg",
+},
       
      // Agrega más canciones según necesites
  ];
