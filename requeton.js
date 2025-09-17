@@ -209,10 +209,15 @@ document.getElementById('play-btn').addEventListener('click', function() {
     var audio = document.getElementById('myAudio');
     audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
     audio.play();});
-    document.getElementById('toggleButton').addEventListener('click', function() {
-        var audio = document.getElementById('myAudio');
-        audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
-        audio.play();});
+    document.getElementById('menu').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+            audio.play();
+            setTimeout(() => {
+                // Cambia esta URL por la de tu sistema real
+                window.location.href = "index.html";
+            }, 2000);
+        });
 
 // ocultar lista de musica
 document.addEventListener('DOMContentLoaded', function() {
