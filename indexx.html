@@ -3,80 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Música</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>bienvenido Bit Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 20px;
         }
-        .album-art {
-            aspect-ratio: 1 / 1;
+        
+        .container {
+            background:rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
         }
+        
+        h1 {
+            color: #0beb30;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+       
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .button-title {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #0beb30;
+            font-size: 1.1rem;
+        }
+        
+        .button-description {
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 250px;
+        }
+        
+        /* Estilos para los botones */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        /* Botón con Font Awesome */
+        .btn-fa {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+        }
+        
+        .btn-fa:hover {
+            background: linear-gradient(45deg, #ff5252, #0beb30);
+        }
+        
+        /* Botón con SVG */
+        .btn-svg {
+            background: linear-gradient(45deg, #4ecdc4, #556270);
+            color: white;
+        }
+        
+        .btn-svg:hover {
+            background: linear-gradient(45deg, #3dbdb4, #44505c);
+        }
+        
+        /* Botón con emoji */
+        .btn-emoji {
+            background: linear-gradient(45deg, #0846f1 , #16ecb6);
+            color: white;
+        }
+        
+        .btn-emoji:hover {
+            background: linear-gradient(45deg, #f3a91d, #9a1a1a);
+        }
+        
+        /* Botón con imagen */
+        .btn-img {
+            background: linear-gradient(45deg, #8e2de2, #4a00e0);
+            color: white;
+        }
+        
+        .btn-img:hover {
+            background: linear-gradient(45deg, #7d1dd1, #3d00c7);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #fff;
+            font-size: 0.9rem;
+       }
+     
     </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen p-4 sm:p-6 lg:p-8">
+<body>
+    <div class="container" id="audioDiv">
+        <h1><i class="fas fa-music"></i> Bit Music</h1>
+        
+        <audio id="Audio" >
+            <source src="Higher Consciousness (Epic Background Music) - Fearless Motivation Instrumentals.mp3" type="audio/mp3">
+        </audio>
 
-    <div class="max-w-4xl mx-auto">
-        <!-- Main Player -->
-        <div class="bg-gray-800 rounded-2xl p-6 mb-8 shadow-2xl">
-            <h1 class="text-3xl font-bold mb-4">Música</h1>
 
-            <!-- Current Song Display -->
-            <div class="flex flex-col items-center text-center">
-                <img id="current-album-art" src="https://placehold.co/400x400/1f2937/d1d5db?text=Album+Art" alt="Album Art" class="album-art w-full max-w-sm rounded-2xl shadow-xl mb-4 transition-transform duration-300 ease-in-out">
-                <h2 id="current-title" class="text-xl font-bold">Sin seleccionar</h2>
-                <p id="current-artist" class="text-gray-400">Selecciona una canción</p>
+        <div class="button-grid">
+            <div class="button-wrapper">
+                <h3 class="button-title">Tu música, bariada</h3>
+                <p class="button-description">Crea tu banda sonora perfecta y sumérgete en el ritmo.</p>
+                <button class="btn btn-fa" id="soundButton">
+                    <i class="fas fa-list-music"></i> Mi Lista
+                </button>
+                <audio id="myAudio" src="dead.mp3"></audio>
             </div>
-
-            <!-- Playback Controls -->
-            <div class="mt-8">
-                <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden mb-4">
-                    <div id="progress-bar" class="h-1 bg-blue-500 rounded-full w-0 transition-all duration-100 ease-linear"></div>
-                </div>
-
-                <div class="flex justify-center items-center space-x-6 text-2xl">
-                    <button id="prev-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
-                    </button>
-                    <button id="play-pause-btn" class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-400 transition-colors duration-200">
-                        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
-                        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
-                    </button>
-                    <button id="next-btn" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
-                    </button>
-                </div>
+            
+            <div class="button-wrapper">
+                <h3 class="button-title">Tu música, Requeton</h3>
+                <p class="button-description">Crea tu banda sonora perfecta y sumérgete en el ritmo.</p>
+                <button class="btn btn-svg" id="requeton">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 6H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 12H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 18H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 6H3.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H3.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H3.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 19.5C4.82843 19.5 5.5 18.8284 5.5 18C5.5 17.1716 4.82843 16.5 4 16.5C3.17157 16.5 2.5 17.1716 2.5 18C2.5 18.8284 3.17157 19.5 4 19.5Z" fill="white"/>
+                        <path d="M4 13.5C4.82843 13.5 5.5 12.8284 5.5 12C5.5 11.1716 4.82843 10.5 4 10.5C3.17157 10.5 2.5 11.1716 2.5 12C2.5 12.8284 3.17157 13.5 4 13.5Z" fill="white"/>
+                        <path d="M4 7.5C4.82843 7.5 5.5 6.82843 5.5 6C5.5 5.17157 4.82843 4.5 4 4.5C3.17157 4.5 2.5 5.17157 2.5 6C2.5 6.82843 3.17157 7.5 4 7.5Z" fill="white"/>
+                    </svg>
+                    Lista Musical
+                </button>
             </div>
+            
+            <div class="button-wrapper">
+                <h3 class="button-title">Tu música, Clasica</h3>
+                <p class="button-description">Difruta de tu música clasica y sumérgete en el ritmo.</p>
+                <button class="btn btn-emoji" id="clasica">
+                    🎵 Lista
+                </button>
+            </div>
+            
+           
         </div>
-
-        <!-- Sections -->
-        <div class="space-y-8">
-            <!-- Para Ti (For You) Section -->
-            <section class="bg-gray-800 rounded-2xl p-6 shadow-2xl">
-                <h2 class="text-xl font-bold mb-4">Para Ti</h2>
-                <div id="for-you-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <!-- Dynamic content will go here -->
-                </div>
-            </section>
-
-            <!-- Library Section -->
-            <section class="bg-gray-800 rounded-2xl p-6 shadow-2xl">
-                <h2 class="text-xl font-bold mb-4">Biblioteca</h2>
-                <div class="mb-4">
-                    <input type="text" id="search-bar" placeholder="Buscar en tu biblioteca..." class="w-full p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200">
-                </div>
-                <div id="library-list" class="space-y-4">
-                    <!-- Song list will be populated here -->
-                </div>
-            </section>
+        
+        <div class="footer">
+            <p> v2.0.0 · © 2025 BIT CODEU/company</p>
         </div>
-
-        <audio id="audio-player"></audio>
     </div>
 
-    <script src="playlist.js"></script>
+    <script>
+        // Añadir interactividad a los botones
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 100);
+            });
+        });
+
+        document.getElementById('soundButton').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "presentacion.html";
+    }, 2000);
+    
+});
+document.getElementById('requeton').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "requeton.html";
+    }, 2000);
+    
+});
+document.getElementById('clasica').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "clasica.html";
+    }, 2000);
+    
+});
+const audioDiv = document.getElementById('audioDiv');
+        const audio = document.getElementById('Audio');
+        
+        audioDiv.addEventListener('mouseenter', function() {
+            audio.play();
+            audio.currentTime = 0;
+        });
+        
+        audioDiv.addEventListener('mouseleave', function() {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    </script>
 </body>
 </html>
