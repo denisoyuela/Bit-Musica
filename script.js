@@ -659,7 +659,7 @@ document.getElementById('play-btn').addEventListener('click', function() {
             audio.play();
             setTimeout(() => {
                 // Cambia esta URL por la de tu sistema real
-                window.location.href = "index.html";
+                window.location.href = "indexx.html";
             }, 2000);
         });
 
