@@ -1,9 +1,23 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-   {
+   { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
+      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
+       }, {
         title: "El Teléfono", artist: "Hector Bambino EL Father", src: " Hector Bambino EL Father, Wisin & Yandel - El Teléfono (Official Video) - Wisin & Yandel Fans.mp3",  duration: "3:58",
         cover: "https://i.ytimg.com/vi/5ensVGQU9Xg/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGDIgWyhyMA8=&rs=AOn4CLAaYl86L9_OImznLECFE4UXvZUY-A",
-     }, 
+     },  { title: "Me Niegas", artist: "Baby Rasta y Gringo", src: "Baby Rasta y Gringo - Me Niegas (Official Video) - BabyRastaGringoVEVO.mp3",  duration: "3:27",
+      cover: "https://i.ytimg.com/vi/xfHZOY03y2w/maxresdefault.jpg",
+       },  { title: "Dices", artist: "De la Ghetto", src: "De la Ghetto - Dices [Official Video] - De La Ghetto.mp3",  duration: "3:41",
+      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZpCNDL_WC5WbI6Mb6m__SvIOpx4NdYZgAg&s",
+       },  { title: "Intimidad", artist: "Farruko", src: "Farruko - Intimidad (Cover Audio) - FARRUKOVEVO.mp3",  duration: "4:05",
+      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEj_IBcOuINgtZzJQu4v_wo46sEfNWPB0Jg&s",
+       },  { title: "Cositas Que Haciamos", artist: "Farruko", src: "Farruko - Cositas Que Haciamos (Official Video) - FARRUKOVEVO.mp3",  duration: "4:17",
+      cover: "https://i.ytimg.com/vi/B4uUmhAhc6A/maxresdefault.jpg",
+       },  { title: "Chulo Sin H ft.", artist: "De La Ghetto", src: "De La Ghetto - Chulo Sin H ft. Jowell & Randy [Official Video] - De La Ghetto.mp3",  duration: "4:25",
+      cover: "https://i.ytimg.com/vi/o9jTh9Rs6b0/mqdefault.jpg",
+       },  { title: "Algo Me Gusta De Ti", artist: "WisinYYandel", src: "Algo Me Gusta De Ti (Official Video) - WisinYYandelVEVO.mp3",  duration: "4:56",
+      cover: "https://i.ytimg.com/vi/Vb5hquFJ988/maxresdefault.jpg",
+       }, 
     // Agrega más canciones según necesites
 ];
 
