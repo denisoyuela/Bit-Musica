@@ -341,6 +341,25 @@ background:rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    background-color: #19f006;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(21, 252, 0, 0.7);
+    }
+    
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+    
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
 }
 .status-dot img {
     width: 100%;
@@ -356,7 +375,9 @@ background:rgba(255, 255, 255, 0.1);
 .status-online {
     background-color: #28a745;
 }
-
+spa{
+    color: #3ef108;
+}
 .status-offline {
     background-color: #dc3545;
 }
