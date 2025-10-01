@@ -3,57 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading con Redirección</title>
+    <title>BIT MUSIC Logo</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            overflow: hidden;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
         }
-        
-        .container {
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            padding: 30px;
-            background:rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-        }
-        
-        .logo-container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
 
+        .logo-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-        .loading-container {
-            width: 100%;
-            background: white;
-            height: 25px;
-            
-            overflow: hidden;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        .bit-music-logo {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+            animation: gradientShift 3s ease infinite;
+            letter-spacing: 2px;
+            position: relative;
         }
-        
+
+        .bit-music-logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0.2;
+            animation: gradientShift 3s ease infinite;
+            filter: blur(15px);
+        }
+
+        .subtitle {
+            color: #4ecdc4;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .music-bars {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 20px;
+            height: 30px;
+        }
+
+        .bar {
+            width: 6px;
+            background: linear-gradient(to top,  #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6);
+            border-radius: 3px;
+            animation: barAnimation 1.5s ease-in-out infinite;
+        }
+
+        .bar:nth-child(1) { animation-delay: 0s; }
+        .bar:nth-child(2) { animation-delay: 0.1s; }
+        .bar:nth-child(3) { animation-delay: 0.2s; }
+        .bar:nth-child(4) { animation-delay: 0.3s; }
+        .bar:nth-child(5) { animation-delay: 0.4s; }
+        .bar:nth-child(6) { animation-delay: 0.5s; }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes barAnimation {
+            0%, 100% { height: 5px; }
+            50% { height: 25px; }
+        }
+
+
+
         .progress-bar {
             height: 100%;
             width: 0%;
-            background: linear-gradient(to right, #3a3837,#11c93f);
+            background: linear-gradient(45deg,  #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6);
            
             transition: width 0.5s ease;
         }
@@ -70,144 +125,39 @@
             font-size: 1.8rem;
             font-weight: bold;
             margin: 15px 0;
-            color: #24da24;
+            color: #21c8d4;
         }
-      
-       
-
-        .logo-text {
-            color:#41e62b ;
-            font-size: 28px;
-            font-weight: bold;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(10, 63, 163, 0.3);
-        }
-        .logo-text i{
-            color: #41e62b;
-        }
-        .music-waves {
-            display: flex;
-            align-items: flex-end;
-            height: 100px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .wave {
-            width: 12px;
-            height: 10px;
-            background: linear-gradient(to top, #41e62b,#0a0a0a);
-            margin: 0 4px;
-            border-radius: 5px 5px 0 0;
-            animation: wave 1.2s infinite ease-in-out;
-        }
-        
-        .wave:nth-child(2) {
-            animation-delay: 0.15s;
-            height: 30px;
-            background: linear-gradient(to top, #0a0a0a, #41e62b);
-        }
-        
-        .wave:nth-child(3) {
-            animation-delay: 0.3s;
-            height: 60px;
-            background: linear-gradient(to top, #41e62b,#0a0a0a );
-        }
-        
-        .wave:nth-child(4) {
-            animation-delay: 0.45s;
-            height: 80px;
-            background: linear-gradient(to top,#0a0a0a,#41e62b);
-        }
-        
-        .wave:nth-child(5) {
-            animation-delay: 0.6s;
-            height: 70px;
-            background: linear-gradient(to top, #41e62b,#0a0a0a );
-        }
-        
-        .wave:nth-child(6) {
-            animation-delay: 0.75s;
-            height: 50px;
-            background: linear-gradient(to top, #0a0a0a,#41e62b);
-        }
-        
-        .wave:nth-child(7) {
-            animation-delay: 0.9s;
+        .loading-container {
+            width: 100%;
+            background: #f9faf9;
             height: 20px;
-            background: linear-gradient(to top, #41e62b,#0a0a0a );
-        }
-        
-        .note {
-            position: absolute;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 24px;
-            animation: float 4s infinite ease-in-out;
-        }
-        
-        .note:nth-child(1) {
-            top: -30px;
-            left: 30px;
-            animation-delay: 0.5s;
-        }
-        
-        .note:nth-child(2) {
-            top: -15px;
-            right: 40px;
-            animation-delay: 1s;
-        }
-        
-        .note:nth-child(3) {
-            bottom: 40px;
-            left: 50px;
-            animation-delay: 1.5s;
-        }
-        
-        @keyframes wave {
-            0%, 100% {
-                transform: scaleY(0.8);
-            }
-            50% {
-                transform: scaleY(1.2);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0.7;
-            }
-            50% {
-                transform: translateY(-15px) rotate(10deg);
-                opacity: 1;
-            }
+            
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
- <div class="container">
-        <div class="logo-container">
-            <div class="music-waves">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
-            </div>
-            </div>
-            <div class="logo-text"><i>Bit</i> Music</div>
- <div class="percentage" id="percentage">0%</div>
- <div class="loading-container">
- <div class="progress-bar" id="progress-bar"></div>
-  <script>
-        // Configuración - Cambia esta URL por la de destino
-        const DESTINATION_URL = "https://www.example.com";
+    <div class="logo-container">
+        <div class="bit-music-logo">BIT MUSIC</div>
+        <div class="subtitle">Digital Sound Revolution</div>
+        <div class="percentage" id="percentage">0%</div>
+        <div class="loading-container">
+        <div class="progress-bar" id="progress-bar"></div> 
+       </div>
+        <div class="music-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+   <script>
+     // Configuración - Cambia esta URL por la de destino
+     const DESTINATION_URL = "https://www.example.com";
         const LOADING_TIME = 5; // Tiempo en segundos
         
         // Elementos del DOM
@@ -244,8 +194,8 @@
         
         // Redirección automática al completar el tiempo
         setTimeout(() => {
-            window.location.href ="indexx.html" ;
+            window.location.href ="index.html" ;
         }, LOADING_TIME * 1000);
-    </script>
+   </script> 
 </body>
 </html>
