@@ -1,6 +1,8 @@
 // Lista de canciones (puedes agregar más)
 const songs = [ 
-   { title: "Do Ya Like x Resonance", artist: "marcella", src: "Do Ya Like x Resonance - marcella.mp3",  duration: "3:40",
+    { title: "ENCARA VIDA", artist: "KVRMVD", src: "ENCARA VIDA - KVRMVD.mp3",  duration: "1:28",
+         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpC-mo6H-Rwy2Ubjhs7FxZuzTQlv-1u9MQ-A&s",
+    }, { title: "Do Ya Like x Resonance", artist: "marcella", src: "Do Ya Like x Resonance - marcella.mp3",  duration: "3:40",
      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5xb3RSzCXFzro6BR0bSdwajZmMswpjhE9A&s",
     }, {
         title: " Sure Thing ", artist: "Miguel", src: "Miguel - Sure Thing (Official Video) - MiguelVEVO.mp3",  duration: "3:22",
