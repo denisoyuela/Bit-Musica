@@ -1,22 +1,30 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-   { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
+    { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
       cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
+        background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
        }, {
         title: "El Teléfono", artist: "Hector Bambino EL Father", src: " Hector Bambino EL Father, Wisin & Yandel - El Teléfono (Official Video) - Wisin & Yandel Fans.mp3",  duration: "3:58",
         cover: "https://i.ytimg.com/vi/5ensVGQU9Xg/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGDIgWyhyMA8=&rs=AOn4CLAaYl86L9_OImznLECFE4UXvZUY-A",
+        background: "https://i.ytimg.com/vi/5ensVGQU9Xg/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHOBYAC0AWKAgwIABABGDIgWyhyMA8=&rs=AOn4CLAaYl86L9_OImznLECFE4UXvZUY-A",
      },  { title: "Me Niegas", artist: "Baby Rasta y Gringo", src: "Baby Rasta y Gringo - Me Niegas (Official Video) - BabyRastaGringoVEVO.mp3",  duration: "3:27",
-      cover: "https://i.ytimg.com/vi/xfHZOY03y2w/maxresdefault.jpg",
+        cover: "https://i.ytimg.com/vi/xfHZOY03y2w/maxresdefault.jpg",
+        background: "https://i.ytimg.com/vi/xfHZOY03y2w/maxresdefault.jpg",
        },  { title: "Dices", artist: "De la Ghetto", src: "De la Ghetto - Dices [Official Video] - De La Ghetto.mp3",  duration: "3:41",
-      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZpCNDL_WC5WbI6Mb6m__SvIOpx4NdYZgAg&s",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZpCNDL_WC5WbI6Mb6m__SvIOpx4NdYZgAg&s",
+        background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwZpCNDL_WC5WbI6Mb6m__SvIOpx4NdYZgAg&s",
        },  { title: "Intimidad", artist: "Farruko", src: "Farruko - Intimidad (Cover Audio) - FARRUKOVEVO.mp3",  duration: "4:05",
-      cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEj_IBcOuINgtZzJQu4v_wo46sEfNWPB0Jg&s",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEj_IBcOuINgtZzJQu4v_wo46sEfNWPB0Jg&s",
+        background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEj_IBcOuINgtZzJQu4v_wo46sEfNWPB0Jg&s",
        },  { title: "Cositas Que Haciamos", artist: "Farruko", src: "Farruko - Cositas Que Haciamos (Official Video) - FARRUKOVEVO.mp3",  duration: "4:17",
-      cover: "https://i.ytimg.com/vi/B4uUmhAhc6A/maxresdefault.jpg",
+        cover: "https://i.ytimg.com/vi/B4uUmhAhc6A/maxresdefault.jpg",
+       background: "https://i.ytimg.com/vi/B4uUmhAhc6A/maxresdefault.jpg",
        },  { title: "Chulo Sin H ft.", artist: "De La Ghetto", src: "De La Ghetto - Chulo Sin H ft. Jowell & Randy [Official Video] - De La Ghetto.mp3",  duration: "4:25",
-      cover: "https://i.ytimg.com/vi/o9jTh9Rs6b0/mqdefault.jpg",
+        cover: "https://i.ytimg.com/vi/o9jTh9Rs6b0/mqdefault.jpg",
+        background: "https://i.ytimg.com/vi/o9jTh9Rs6b0/mqdefault.jpg",
        },  { title: "Algo Me Gusta De Ti", artist: "WisinYYandel", src: "Algo Me Gusta De Ti (Official Video) - WisinYYandelVEVO.mp3",  duration: "4:56",
-      cover: "https://i.ytimg.com/vi/Vb5hquFJ988/maxresdefault.jpg",
+        cover: "https://i.ytimg.com/vi/Vb5hquFJ988/maxresdefault.jpg",
+      background: "https://i.ytimg.com/vi/Vb5hquFJ988/maxresdefault.jpg",
        }, 
     // Agrega más canciones según necesites
 ];
@@ -33,10 +41,13 @@ const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const songTitle = document.getElementById('song-title');
 const artistEl = document.getElementById('artist');
-const coverEl = document.getElementById('cover');
+const coverImage = document.getElementById('cover-image');
 const playlistEl = document.getElementById('playlist');
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
+const body = document.body;
+
+
 
 // Variables de estado
 let currentSongIndex = 0;
@@ -49,19 +60,21 @@ let currentPlaylist = [...songs];
 // Inicializar el reproductor
 function initPlayer() {
     loadSong(currentPlaylist[currentSongIndex]);
-    renderPlaylist();
+    renderPlaylist();   
 }
 
 // Cargar canción
 function loadSong(song) {
     songTitle.textContent = song.title;
     artistEl.textContent = song.artist;
-    coverEl.src = song.cover;
+    coverImage.src = song.cover;
+            
     audioPlayer.src = song.src;
     durationEl.textContent = song.duration;
-    
+    body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${song.background}')`;
     // Actualizar la clase 'playing' en la lista
     updatePlayingClass();
+   
 }
 
 // Reproducir canción
