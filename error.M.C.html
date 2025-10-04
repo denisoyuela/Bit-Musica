@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit Music - Servicio no disponible</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+            animation: gradientShift 3s ease infinite;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0.2;
+            animation: gradientShift 3s ease infinite;
+            filter: blur(15px);
+        }
+
+        .message {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .icon {
+            font-size: 5rem;
+            margin: 30px 0;
+            color: #0cf105;
+            animation: pulse 2s infinite;
+        }
+        
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #000000, #19f006);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, #e0d5d5, #19f006);
+        color: #000000;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .music-bars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 40px 0;
+            height: 40px;
+        }
+        
+        .bar {
+            width: 8px;
+            background: linear-gradient(to top,  #0846f1 ,
+    #c816ec , 
+    #0846f1 , 
+    #16ecb6);
+            border-radius: 5px;
+            animation: musicBars 1.5s infinite ease-in-out;
+        }
+        
+        .bar:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        .bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        .bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        
+        .bar:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes musicBars {
+            0%, 100% {
+                height: 10px;
+            }
+            50% {
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .message {
+                font-size: 1.4rem;
+            }
+            
+            .icon {
+                font-size: 4rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+        .container i{
+            color: #19f006;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo ">Bit Music</h1>
+        <div class="icon">♪...</div>
+        <h2 class="message">Tu música <i>clásica  </i>no está disponible en este momento </h2>
+        
+        <div class="music-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <p class="description">
+            Estamos experimentando problemas técnicos con nuestro servicio de música clásica. 
+            Nuestro equipo está trabajando para solucionarlo lo antes posible. 
+            Mientras tanto, puedes explorar otros géneros musicales disponibles.
+        </p>
+        
+        <div class="action-buttons">
+            <button class="btn btn-primary" id="regresar">Explorar otros géneros</button>
+            <button class="btn btn-secondary" id="reintentar">Reintentar conexión</button>
+            <audio id="myAudio" src="dead.mp3"></audio>
+        </div>
+        <script>
+document.getElementById('regresar').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "indexx.html";
+    }, 2000);
+    
+});
+document.getElementById('reintentar').addEventListener('click', function() {
+    var audio = document.getElementById('myAudio');
+    audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+    audio.play();
+    setTimeout(() => {
+        // Cambia esta URL por la de tu sistema real
+        window.location.href = "clasica.html";
+    }, 2000);
+    
+});
+        </script>
+    </div>
+</body>
+</html>
