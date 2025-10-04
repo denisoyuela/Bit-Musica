@@ -6,23 +6,24 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: #fff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    color: white;
+    padding: 20px;
 }
-
 
 .player-container {
     width: 90%;
     max-width: 400px;
     backdrop-filter: blur(10px);
-background:rgba(255, 255, 255, 0.1);
+background:transparent;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
