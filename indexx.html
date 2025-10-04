@@ -18,26 +18,48 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
             padding: 20px;
         }
         
         .container {
-            background:rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 20px;
-            padding: 40px;
+            padding: 50px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 800px;
             width: 100%;
         }
         
-        h1 {
-            color: #0beb30;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
+        h1{
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+            animation: gradientShift 3s ease infinite;
+            letter-spacing: 2px;
+            position: relative;
         }
-       
+        h1::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0.2;
+            animation: gradientShift 3s ease infinite;
+            filter: blur(15px);
+        }
         .button-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
