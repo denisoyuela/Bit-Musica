@@ -4,32 +4,45 @@
    // cover: "",
  
    const songs = [
-   { title: " & Nelph - It Cost", artist: "JUCZ", src: "JuCz & Nelph - It Cost - JUCZ.mp3",  duration: "4:27",
-   cover: "https://m.media-amazon.com/images/I/51oAwuaw4vL._UXNaN_FMjpg_QL85_.jpg",
+  { title: " & Nelph - It Cost", artist: "JUCZ", src: "JuCz & Nelph - It Cost - JUCZ.mp3",  duration: "4:27",
+    cover: "https://m.media-amazon.com/images/I/51oAwuaw4vL._UXNaN_FMjpg_QL85_.jpg",
+    background: "https://m.media-amazon.com/images/I/51oAwuaw4vL._UXNaN_FMjpg_QL85_.jpg",
 },  { title: "Accidentally In Love", artist: "Counting Crows ", src: "Counting Crows - Accidentally In Love (Lyric Video) - Love Life Lyrics.mp3",  duration: "4:11",
- cover: "https://i.ytimg.com/vi/xgyT0z7-5ts/maxresdefault.jpg",
+    cover: "https://i.ytimg.com/vi/xgyT0z7-5ts/maxresdefault.jpg",
+    background: "https://i.ytimg.com/vi/xgyT0z7-5ts/maxresdefault.jpg",
 },  { title: "Gloria", artist: "Laura Branigan", src: "Laura Branigan - Gloria (Official Music Video) - RHINO.mp3",  duration: "3:52",
     cover: "https://i.ytimg.com/vi/nNEb2k_EmMg/sddefault.jpg",
+    background: "https://i.ytimg.com/vi/nNEb2k_EmMg/sddefault.jpg",
 },  { title: "Héroe De Leyenda", artist:"Héroes Del Silencio",  src: "Héroes Del Silencio - Héroe De Leyenda (1988) - Jean PM 2000.mp3",  duration: "4:07",
     cover: "https://i.ytimg.com/vi/suGTTScA4KU/maxresdefault.jpg",
+    background: "https://i.ytimg.com/vi/suGTTScA4KU/maxresdefault.jpg",
 },  { title: "Maldito duende", artist: "Héroes del Silencio", src: "Héroes del Silencio - Maldito duende - Enrique Bunbury.mp3",  duration: "4:21",
     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQElQcEAmv4pZpN5Q1z8nZWvfIz3ZFQLwB7EQ&s",
+   background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQElQcEAmv4pZpN5Q1z8nZWvfIz3ZFQLwB7EQ&s",
 },  { title: "Wind Of Change ", artist: "Scorpions", src: "Scorpions - Wind Of Change (Official Music Video) - ScorpionsVEVO.mp3",  duration: "4:43",
     cover: "https://i.ytimg.com/vi/n4RjJKxsamQ/maxresdefault.jpg",
+    background: "https://i.ytimg.com/vi/n4RjJKxsamQ/maxresdefault.jpg",
 },  { title: "La Boda", artist: "Aventura", src: "Aventura - La Boda (Letra) - TED SAD.mp3",  duration: "4:50",
     cover: "https://www.cmtv.com.ar/tapas-cd/aventurakingsofbachata.webp",
+    background: "https://www.cmtv.com.ar/tapas-cd/aventurakingsofbachata.webp",
 },  { title: "Self Control ", artist: "Laura Branigan", src: "Laura Branigan - Self Control (Official Music Video) - RHINO.mp3",  duration: "5:08",
     cover: "https://i.ytimg.com/vi/RP0_8J7uxhs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAh5cjExe_rIogpcPUy3zC9Zto_Lw",
-},  { title: " Total Eclipse of the Heart", artist: "Bonnie Tyler", src: "Bonnie Tyler - Total Eclipse of the Heart (Turn Around) (Official Video) - bonnietylerVEVO.mp3",  duration: "5:34",
+   background: "https://i.ytimg.com/vi/RP0_8J7uxhs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAh5cjExe_rIogpcPUy3zC9Zto_Lw",
+},
+{ title: " Total Eclipse of the Heart", artist: "Bonnie Tyler", src: "Bonnie Tyler - Total Eclipse of the Heart (Turn Around) (Official Video) - bonnietylerVEVO.mp3",  duration: "5:34",
     cover: "https://i.ytimg.com/vi/lcOxhH8N3Bo/maxresdefault.jpg",
+    background: "https://i.ytimg.com/vi/lcOxhH8N3Bo/maxresdefault.jpg",
 },  { title: "Entre dos tierras ", artist: "Héroes del Silencio", src: "Héroes del Silencio - Entre dos tierras (videoclip oficial) - Heroes Del Silencio Catálogo.mp3",  duration: "6:10",
     cover: "https://i.ytimg.com/vi/SzimletXB7M/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AGOBYAC4AOKAgwIABABGH8gMigtMA8=&rs=AOn4CLCinJRCVO4nEVp5Z-ePmKf-bUz_iw",
+    background: "https://i.ytimg.com/vi/SzimletXB7M/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AGOBYAC4AOKAgwIABABGH8gMigtMA8=&rs=AOn4CLCinJRCVO4nEVp5Z-ePmKf-bUz_iw",
 },  { title: " Bed Of Roses", artist: "BonJovi", src: "Bon Jovi - Bed Of Roses (Official Music Video) - BonJoviVEVO.mp3",  duration: "6:43",
     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlLOPnoFbg2OaGotjiOg-uINe3PcxWG1fGWQ&s",
+   background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlLOPnoFbg2OaGotjiOg-uINe3PcxWG1fGWQ&s",
 },  { title: "Knockin' On Heaven'", artist: "Guns N' Roses", src: "Guns N' Roses - Knockin' On Heaven's Door (Visualizer) - GunsNRosesVEVO.mp3",  duration: "5:36",
     cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRizfpqveNPVF4JPnP7_qZlE_Udqh6U4F2cfg&s",
+   background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRizfpqveNPVF4JPnP7_qZlE_Udqh6U4F2cfg&s",
  },
-      
+
      // Agrega más canciones según necesites
  ];
  
@@ -45,10 +58,11 @@
  const durationEl = document.getElementById('duration');
  const songTitle = document.getElementById('song-title');
  const artistEl = document.getElementById('artist');
- const coverEl = document.getElementById('cover');
- const playlistEl = document.getElementById('playlist');
- const searchInput = document.getElementById('search-input');
- const searchBtn = document.getElementById('search-btn');
+ const coverImage = document.getElementById('cover-image');
+const playlistEl = document.getElementById('playlist');
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const body = document.body;
  
  // Variables de estado
  let currentSongIndex = 0;
@@ -68,9 +82,10 @@
  function loadSong(song) {
      songTitle.textContent = song.title;
      artistEl.textContent = song.artist;
-     coverEl.src = song.cover;
+     coverImage.src = song.cover;
      audioPlayer.src = song.src;
      durationEl.textContent = song.duration;
+     body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${song.background}')`;
      
      // Actualizar la clase 'playing' en la lista
      updatePlayingClass();
