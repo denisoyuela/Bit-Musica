@@ -27,7 +27,7 @@ background:transparent;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: auto;
+    margin:0;
     background-position: center;
     background-size: cover;
     
