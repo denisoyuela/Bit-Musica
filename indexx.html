@@ -23,17 +23,21 @@
         }
         
         .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            max-width: 800px;
-            width: 100%;
+            width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+background:transparent;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    background-position: center;
+    background-size: cover; 
+    
         }
         
         h1{
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 900;
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
             background-size: 300% 300%;
@@ -44,6 +48,7 @@
             animation: gradientShift 3s ease infinite;
             letter-spacing: 2px;
             position: relative;
+            text-align: center;
         }
         h1::before {
             content: '';
@@ -162,7 +167,8 @@
         .footer {
             margin-top: 40px;
             color: #fff;
-            font-size: 0.9rem;
+            font-size: 0.5rem;
+            text-align: right;
        }
      
     </style>
