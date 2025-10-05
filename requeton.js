@@ -1,6 +1,9 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-    { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
+      {title: "MySpace ", artist: "Don Omar-Wisin & Yandel", src: "MySpace (feat. Wisin & Yandel) - Don Omar.mp3",  duration: "3:42",
+        cover: "https://cdn-images.dzcdn.net/images/cover/51e43fe6e66950acc58d364c338ccd4c/500x500.jpg",
+        background: "https://cdn-images.dzcdn.net/images/cover/51e43fe6e66950acc58d364c338ccd4c/500x500.jpg",
+       }, { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
       cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
         background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
        }, {
