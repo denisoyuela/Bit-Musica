@@ -3,7 +3,7 @@ const songs = [
     {title: "Where Have You Been", artist: "Rihanna", src: "Rihanna - Where Have You Been (Orchestra Remix) DJ Tristan & Drinks On Me - Car Tunes.mp3",  duration: "4:08",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7rOpcCq2a1FuD-S6gtra60hwuyitx71dlA&s",
         background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7rOpcCq2a1FuD-S6gtra60hwuyitx71dlA&s",
-    }, {title: "One More Time ", artist: "Daft Punk", src: "Daft Punk - Una vez más (Video oficial) - Daft Punk.mp3",  duration: "5:22",
+    }, {title: "One More Time ", artist: "Daft Punk", src: "Daft Punk - One More Time (Official Video) - Daft Punk.mp3",  duration: "5:22",
         cover: "https://i.ytimg.com/vi/FGBhQbmPwH8/maxresdefault.jpg",
         background: "https://i.ytimg.com/vi/FGBhQbmPwH8/maxresdefault.jpg",
     }, { title: "Got Us Fallin' In Love", artist: "Usher - Pitbull", src: "Usher - DJ Got Us Fallin' In Love (Official Music Video) ft. Pitbull - UsherVEVO.mp3",  duration: "4:07",
