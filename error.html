@@ -19,7 +19,7 @@
                 </p>
     
                 <audio id="myAudio" src="dead.mp3"></audio>
-                <button id="toggleButton"class="toggle-button"> <i class="fas fa-music"></i>Mostrar Música</button>
+                <button id="toggleButton"class="toggle-button"> <i class="fas fa-music"></i>Reintentar conexion</button>
                     <div class="footer">
                         <p> v2.0.0 · © 2025 BIT CODEU/company</p>
                     </div>
@@ -131,7 +131,16 @@ font-size:16px;
             text-align: right;
        }
             </style>
-            <script src="script.d.loading.js"></script>
-            
-        </body>
-        </html>
+            <script>
+                document.getElementById('toggleButton').addEventListener('click', function() {
+  var audio = document.getElementById('myAudio');
+  audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+  audio.play();
+  setTimeout(() => {
+     
+      window.location.href = "indexx.html";
+ }, 2000);
+}); 
+</script>
+</body>
+</html>
