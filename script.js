@@ -1,6 +1,9 @@
 // Lista de canciones (puedes agregar más)
 const songs = [ 
-    {title: "Where Have You Been", artist: "Rihanna", src: "Rihanna - Where Have You Been (Orchestra Remix) DJ Tristan & Drinks On Me - Car Tunes.mp3",  duration: "4:08",
+       {title: "Racing Hearts", artist: "Mattie Maguire", src: "Música de Tecnonauta  Racing Hearts- Mattie Maguire - StarUp.mp3",  duration: "3:01",
+        cover: "https://i1.sndcdn.com/artworks-NeKTV02HdHfj-0-t500x500.png",
+        background: "https://i1.sndcdn.com/artworks-NeKTV02HdHfj-0-t500x500.png",
+    }, {title: "Where Have You Been", artist: "Rihanna", src: "Rihanna - Where Have You Been (Orchestra Remix) DJ Tristan & Drinks On Me - Car Tunes.mp3",  duration: "4:08",
         cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7rOpcCq2a1FuD-S6gtra60hwuyitx71dlA&s",
         background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7rOpcCq2a1FuD-S6gtra60hwuyitx71dlA&s",
     }, {title: "One More Time ", artist: "Daft Punk", src: "Daft Punk - One More Time (Official Video) - Daft Punk.mp3",  duration: "5:22",
