@@ -1,3 +1,14 @@
+document.getElementById('retryBtn').addEventListener('click', function() {
+  var audio = document.getElementById('myAudio');
+  audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
+  audio.play();
+  setTimeout(() => {
+     
+      window.location.href = "indexx.html";
+ }, 2000);
+  
+});
+
 document.getElementById('btnBarroco').addEventListener('click', function() {
     var audio = document.getElementById('myAudio');
     audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
@@ -14,7 +25,7 @@ document.getElementById('btnBarroco').addEventListener('click', function() {
     audio.play();
     setTimeout(() => {
        
-        window.location.href = "presentacion.html";
+        window.location.href = "requeton.html";
    }, 2000);
     
  });
@@ -24,7 +35,7 @@ document.getElementById('btnBarroco').addEventListener('click', function() {
     audio.play();
     setTimeout(() => {
        
-        window.location.href = "presentacion.html";
+        window.location.href = "clasica.html";
    }, 2000);
     
  });
