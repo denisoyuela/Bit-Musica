@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bit Music</title>
+    <title>Música Clásica - Error Técnico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -404,14 +404,11 @@ backdrop-filter:blur(2px);
            
             <audio id="myAudio" src="dead.mp3"></audio>
             
-            <center>
+            
                 <button class="retry-btn" id="retryBtn">
-                    <span></span>
+                    
                     Reintentar Conexión
                 </button>
-            </center>
-           
-        </div>
         <div class="footer">
             <p> v2.0.0 · © 2025 BIT CODEU/company</p>
         </div>
@@ -438,12 +435,12 @@ backdrop-filter:blur(2px);
 
             // Simular tiempo de carga (2-4 segundos aleatorio)
             const loadTime = Math.random() * 2000 + 2000;
-            
             setTimeout(() => {
-                // Ocultar loading y mostrar error
-                loadingContainer.style.display = 'none';
-                errorContainer.style.display = 'block';
-            }, loadTime);
+       
+       window.location.href = "indexx.html";
+  }, 2000);
+           
+            
         }
 
         
@@ -452,10 +449,10 @@ backdrop-filter:blur(2px);
         // Función para reintentar
         function retryConnection() {
             // Ocultar error
-            errorContainer.style.display = 'none';
+            errorContainer.style.display = 'indexx.html';
             
             // Mostrar botones nuevamente
-            document.querySelector('.buttons-container').style.display = 'grid';
+           
         }
 
         // Event listeners para los botones
