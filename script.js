@@ -1,6 +1,9 @@
 // Lista de canciones (puedes agregar más)
 const songs = [ 
-       {title: "Racing Hearts", artist: "Mattie Maguire", src: "Música de Tecnonauta  Racing Hearts- Mattie Maguire - StarUp.mp3",  duration: "3:01",
+       {title: "Release", artist: "Ason ID", src: "Ason ID - Release - Ason ID - Royalty Free Music.mp3",  duration: "3:42",
+        cover: "https://i1.sndcdn.com/avatars-000050480682-fi4d4l-t1080x1080.jpg",
+        background: "https://i1.sndcdn.com/avatars-000050480682-fi4d4l-t1080x1080.jpg",
+    }, {title: "Racing Hearts", artist: "Mattie Maguire", src: "Música de Tecnonauta  Racing Hearts- Mattie Maguire - StarUp.mp3",  duration: "3:01",
         cover: "https://i1.sndcdn.com/artworks-NeKTV02HdHfj-0-t500x500.png",
         background: "https://i1.sndcdn.com/artworks-NeKTV02HdHfj-0-t500x500.png",
     }, {title: "Where Have You Been", artist: "Rihanna", src: "Rihanna - Where Have You Been (Orchestra Remix) DJ Tristan & Drinks On Me - Car Tunes.mp3",  duration: "4:08",
