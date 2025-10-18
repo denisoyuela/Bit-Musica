@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     transition: background-image 1s ease-in-out;
     color: white;
-    backdrop-filter:blur(4px) ;
+    backdrop-filter:blur(4px);
 }
 
 .player-container {
@@ -28,7 +28,6 @@ body {
     margin:0;
     background-position: center;
     background-size: cover;
-
 }
 
 .album-art {
@@ -326,19 +325,18 @@ body {
 
   }
   .status-doyo{
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+           text-align: center;
+            z-index: 9999;
 }
 
   .status-dot {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -365,8 +363,8 @@ body {
     }
 }
 .status-dot img {
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     object-fit: cover;
 
     display: block;
@@ -376,10 +374,10 @@ body {
     transition:  background-color 300ms;
   }
 .status-online {
-    background-color: #28a745;
+    background-color: transparent;
 }
 spa{
-    color: #3ef108;
+    color: #ffffff;
 }
 .status-offline {
     background-color: #dc3545;
@@ -421,5 +419,32 @@ font-size:16px;
     
         .countdown{  
             text-align: center;
+        }
+       
+        
+        
+        .online-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter:blur(4px);
+           
+        }
+        .connection-status {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.5s ease;
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        .connection-status.visible {
+            transform: translateY(0);
+            opacity: 1;
         }
        
