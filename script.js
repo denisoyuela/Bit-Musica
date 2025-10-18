@@ -842,6 +842,7 @@ class OnlineStatus {
         this.checkOnlineStatus();
         
         // Escuchar cambios en la conexión
+      
         window.addEventListener('online', () => this.handleOnline());
         window.addEventListener('offline', () => this.handleOffline());
         
@@ -859,29 +860,21 @@ class OnlineStatus {
 
     handleOnline() {
         this.statusDot.className = 'status-doyo status-online';
-        this.statusText.textContent = 'En línea';
-        this.showNotification('Vuelves a tener conexión', 'success');
+        this.statusText.textContent = '';
+        this.showNotification('', 'success');
     }
 
     handleOffline() {
         this.statusDot.className = 'status-doyo status-offline';
-        this.statusText.textContent = 'Sin conexión';
-        this.showNotification('No hay conexión', 'error');
+        this.statusText.textContent = 'No hay conexión';
+        this.showNotification('', 'error');
     }
 
     showNotification(message, type) {
         // Crear notificación temporal
         const notification = document.createElement('div');
         notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            background: ${type === 'success' ? '#28a745' : '#dc3545'};
-            color: white;
-            border-radius: 5px;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
+           
         `;
         notification.textContent = message;
         
@@ -912,3 +905,63 @@ function simulateConnectionChange() {
 document.addEventListener('DOMContentLoaded', () => {
     new OnlineStatus();
 });
+
+
+
+
+const connectionStatus = document.getElementById('connectionStatus');
+        const onlineMessage = document.getElementById('onlineMessage');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        
+        // Botones de simulación
+        const simulateOfflineBtn = document.getElementById('simulate-offline');
+        const simulateOnlineBtn = document.getElementById('simulate-online');
+        
+        // Función para mostrar la barra de carga
+        function showLoadingBar() {
+            connectionStatus.classList.add('visible');
+            onlineMessage.style.display = 'none';
+            
+            // Actualizar indicador de estado
+            statusIndicator.className = 'status-indicator offline';
+            statusText.textContent = 'Sin conexión a Internet';
+            
+        }
+        
+        // Función para mostrar el mensaje de reconexión
+        function showOnlineMessage() {
+            onlineMessage.style.display = 'block';
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                connectionStatus.classList.remove('visible');
+                
+                // Actualizar indicador de estado
+                statusIndicator.className = 'status-indicator online';
+                statusText.textContent = 'Conectado a Internet';
+            }, 3000);
+        }
+        
+        // Detectar cambios en la conexión real
+        window.addEventListener('online', () => {
+            showOnlineMessage();
+        });
+        
+        window.addEventListener('offline', () => {
+            showLoadingBar();
+        });
+        
+        // Simulación manual
+        simulateOfflineBtn.addEventListener('click', () => {
+            showLoadingBar();
+        });
+        
+        simulateOnlineBtn.addEventListener('click', () => {
+            showOnlineMessage();
+        });
+        
+        // Verificar estado inicial
+        if (!navigator.onLine) {
+            showLoadingBar();
+        }
