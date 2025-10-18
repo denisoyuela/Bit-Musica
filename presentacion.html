@@ -8,13 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+   
     <div class="player-container">
-        <div class="status-doyo status-online" id="statusDot">
-            <div class="status-dot"><img src="https://scontent.fsap4-1.fna.fbcdn.net/v/t39.30808-6/536271085_1363699339092530_2073703411777027719_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=evIaLV4i5UMQ7kNvwEla3tw&_nc_oc=Adm0dFvaKcRDN8-f4zBWXrJdBlGAsQ1q4VGKQOvzkADXS2Hb3lNpZnv763zdUaCDtOU&_nc_zt=23&_nc_ht=scontent.fsap4-1.fna&_nc_gid=J4yhnhUL4zmIa_BBtzgXIA&oh=00_AfafM1Qld8CnN2FIOWpj0LzuNttVWgaGigJHA3iMFYljSQ&oe=68DF7339" alt="Online"></div>
-        </div>
-        <spa id="statusText"></spa> 
-
-        <div class="player">
+            <div class="status-dot"><img src="https://scontent.fsap5-1.fna.fbcdn.net/v/t39.30808-6/514315098_1978668676269010_4475170350983952086_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZEaKVrpBf7oQ7kNvwEQhffn&_nc_oc=Adnblz42abNhVfFTbLgDnACOxuI-dMqDaa0cr7bnf7ksObFQzGA-qVCZ0PW_pM_AykE&_nc_zt=23&_nc_ht=scontent.fsap5-1.fna&_nc_gid=YM8LzxLHMcmcDfPqgHOmNw&oh=00_AffqJDYZuzf72PJLPgtiRp_UeMhNhfgbutbfP2XCef7iJQ&oe=68F8CB31" alt="Online"></div>
+      <div class="player">
             <div class="album-art">
                 <img id="cover-image" src="https://via.placeholder.com/300" alt="Portada del álbum">
             </div>
@@ -51,11 +48,20 @@
                     <input type="text" id="search-input" placeholder="Buscar canción...">
                     <button id="search-btn"><i class="fas fa-search"></i></button>
                 </div>
-                <ul id="playlist"></ul>
+               <div class="playlist" id="playlist"></div>
             </div>
         </div>
     </div>
    
+    <div class="status-doyo status-online" id="statusDot">
+        <spa id="statusText"></spa> 
+    </div>
+    <div id="connectionStatus" class="connection-status">
+    <div id="onlineMessage" class="online-message" style="display: none;">
+        ¡De nuevo en línea!
+    </div>
+</div>
     <script src="script.js"></script>
+   
 </body>
 </html>
