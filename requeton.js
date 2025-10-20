@@ -1,8 +1,8 @@
 // Lista de canciones (puedes agregar más)
 const songs = [
-      {title: "MySpace ", artist: "Don Omar-Wisin & Yandel", src: "MySpace (feat. Wisin & Yandel) - Don Omar.mp3",  duration: "3:42",
-        cover: "https://cdn-images.dzcdn.net/images/cover/51e43fe6e66950acc58d364c338ccd4c/500x500.jpg",
-        background: "https://cdn-images.dzcdn.net/images/cover/51e43fe6e66950acc58d364c338ccd4c/500x500.jpg",
+    {title: "MySpace ", artist: "Don Omar-Wisin & Yandel", src: "MySpace (feat. Wisin & Yandel) - Don Omar.mp3",  duration: "3:42",
+        cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPsbNZMqgEa3Pna2kmd8840aVWxfb3usf3WA&s",
+        background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPsbNZMqgEa3Pna2kmd8840aVWxfb3usf3WA&s",
        }, { title: "Sensacion Del Bloque", artist: "Randy & De La Ghetto", src: "Randy & De La Ghetto - Sensacion Del Bloque - GerN2K.mp3",  duration: "3:14",
       cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
         background: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVkE5TEv1fC4YLDHV0ZzPQ7g4zTO05PMhY3Q&s",
@@ -66,6 +66,8 @@ function initPlayer() {
     renderPlaylist();   
 }
 
+
+
 // Cargar canción
 function loadSong(song) {
     songTitle.textContent = song.title;
@@ -74,7 +76,7 @@ function loadSong(song) {
             
     audioPlayer.src = song.src;
     durationEl.textContent = song.duration;
-    body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${song.background}')`;
+   body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${song.background}')`;
     // Actualizar la clase 'playing' en la lista
     updatePlayingClass();
    
@@ -186,6 +188,8 @@ function toggleRepeat() {
     repeatBtn.style.color = isRepeated ? '#1db954' : 'white';
 }
 
+
+
 // Buscar canción
 function searchSong() {
     const searchTerm = searchInput.value.toLowerCase();
@@ -239,7 +243,7 @@ document.getElementById('play-btn').addEventListener('click', function() {
     var audio = document.getElementById('myAudio');
     audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
     audio.play();});
-    document.getElementById('menu').addEventListener('click', function() {
+     document.getElementById('menu').addEventListener('click', function() {
             var audio = document.getElementById('myAudio');
             audio.currentTime = 0; // Reinicia el sonido si ya se estaba reproduciendo
             audio.play();
@@ -314,6 +318,7 @@ class OnlineStatus {
         this.checkOnlineStatus();
         
         // Escuchar cambios en la conexión
+      
         window.addEventListener('online', () => this.handleOnline());
         window.addEventListener('offline', () => this.handleOffline());
         
@@ -331,29 +336,21 @@ class OnlineStatus {
 
     handleOnline() {
         this.statusDot.className = 'status-doyo status-online';
-        this.statusText.textContent = 'En línea';
-        this.showNotification('Vuelves a tener conexión', 'success');
+        this.statusText.textContent = '';
+        this.showNotification('', 'success');
     }
 
     handleOffline() {
         this.statusDot.className = 'status-doyo status-offline';
-        this.statusText.textContent = 'Sin conexión';
-        this.showNotification('No hay conexión', 'error');
+        this.statusText.textContent = 'No hay conexión';
+        this.showNotification('', 'error');
     }
 
     showNotification(message, type) {
         // Crear notificación temporal
         const notification = document.createElement('div');
         notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 20px;
-            background: ${type === 'success' ? '#28a745' : '#dc3545'};
-            color: white;
-            border-radius: 5px;
-            z-index: 1000;
-            transition: opacity 0.3s ease;
+           
         `;
         notification.textContent = message;
         
@@ -384,3 +381,63 @@ function simulateConnectionChange() {
 document.addEventListener('DOMContentLoaded', () => {
     new OnlineStatus();
 });
+
+
+
+
+const connectionStatus = document.getElementById('connectionStatus');
+        const onlineMessage = document.getElementById('onlineMessage');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        
+        // Botones de simulación
+        const simulateOfflineBtn = document.getElementById('simulate-offline');
+        const simulateOnlineBtn = document.getElementById('simulate-online');
+        
+        // Función para mostrar la barra de carga
+        function showLoadingBar() {
+            connectionStatus.classList.add('visible');
+            onlineMessage.style.display = 'none';
+            
+            // Actualizar indicador de estado
+            statusIndicator.className = 'status-indicator offline';
+            statusText.textContent = 'Sin conexión a Internet';
+            
+        }
+        
+        // Función para mostrar el mensaje de reconexión
+        function showOnlineMessage() {
+            onlineMessage.style.display = 'block';
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                connectionStatus.classList.remove('visible');
+                
+                // Actualizar indicador de estado
+                statusIndicator.className = 'status-indicator online';
+                statusText.textContent = 'Conectado a Internet';
+            }, 3000);
+        }
+        
+        // Detectar cambios en la conexión real
+        window.addEventListener('online', () => {
+            showOnlineMessage();
+        });
+        
+        window.addEventListener('offline', () => {
+            showLoadingBar();
+        });
+        
+        // Simulación manual
+        simulateOfflineBtn.addEventListener('click', () => {
+            showLoadingBar();
+        });
+        
+        simulateOnlineBtn.addEventListener('click', () => {
+            showOnlineMessage();
+        });
+        
+        // Verificar estado inicial
+        if (!navigator.onLine) {
+            showLoadingBar();
+        }
